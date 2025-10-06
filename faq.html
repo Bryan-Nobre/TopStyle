@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ</title>
+    <link rel="stylesheet" href="assets/css/rodape-link.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head>
+<body>
+
+  <!-- Carrinho lateral -->
+  <div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <span class="close-cart">✖</span>
+    </div>
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="coupon">
+        <input type="text" id="cupom-input" placeholder="Digite seu cupom">
+        <button id="apply-coupon">Aplicar</button>
+      </div>
+
+      <div class="resumo">
+        <div><span>Subtotal:</span> <span id="subtotal">R$0,00</span></div>
+        <div><span>Desconto:</span> <span id="desconto">R$0,00</span></div>
+        <div class="total-final"><span>Total:</span> <span id="total">R$0,00</span></div>
+      </div>
+
+      <button class="checkout">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Modal Finalizar Compra -->
+  <div class="finalizar-overlay" id="finalizarOverlay">
+    <div class="finalizar-modal">
+      <div class="finalizar-header">
+        <h2>Finalizar Compra</h2>
+        <span id="fecharFinalizar">✖</span>
+      </div>
+
+      <div class="finalizar-body">
+        <!-- Formulário do Cliente -->
+        <div class="finalizar-info">
+          <h3>Dados Pessoais</h3>
+          <input type="text" id="nome" placeholder="Nome completo" required>
+          <input type="text" id="endereco" placeholder="Endereço completo" required>
+          <input type="text" id="cidade" placeholder="Cidade" required>
+          <input type="text" id="cep" placeholder="CEP" required>
+          <input type="text" id="telefone" placeholder="Telefone para contato" required>
+
+          <h3>Forma de Pagamento</h3>
+          <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+          <label><input type="radio" name="pagamento" value="cartao"> Cartão de Crédito</label>
+
+          <div id="pagamentoCartao" class="hidden">
+            <input type="text" id="nome-cartao" placeholder="Nome impresso no cartão">
+            <input type="text" id="numero-cartao" placeholder="Número do cartão" maxlength="19">
+            <label class="label-validade">Validade do cartão:</label>
+            <input type="month" id="validade-cartao">
+            <input type="text" id="cvv-cartao" placeholder="CVV" maxlength="4">
+          </div>
+
+          <button id="confirmarCompra" class="btn-confirmar">Confirmar Compra</button>
+        </div>
+
+        <!-- Resumo lateral -->
+        <div class="finalizar-resumo">
+          <h3>Resumo do Pedido</h3>
+          <div id="finalizarResumoItens"></div>
+          <div class="finalizar-total">
+            <p><strong>Total:</strong> <span id="finalizarTotal">R$0,00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <!-- Botão hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Overlay -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Menu Esquerda -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="masculino.html">Masculino</a></li>
+        <li><a href="feminino.html">Feminino</a></li>
+        <li><a href="novidades.html">Novidades</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo Centro -->
+    <div class="logo">
+      <a href="base.html"><img src="img/logo_ts_transparent.png" alt=""></a>
+    </div>
+
+    <!-- Ícones Direita -->
+    <div class="icons">
+      <a id="search-icon"><i class="bi bi-search"></i></a>
+      <div class="cart-btn"><i class="bi bi-bag"></i> <span class="cart-count">0</span></div>
+      <a href="index.html"><i class="bi bi-person"></i></a>
+      <!-- já começa escondido -->
+      <a href="" class="admin-icon hidden"><i class="bi bi-incognito"></i></a>
+    </div>
+  </header>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar produtos..." />
+    <button id="close-search"><i class="bi bi-x"></i></button>
+  </div>
+
+    <!-- ===== Bloco de FAQ ===== -->
+<section class="faq-section">
+  <div class="faq-container">
+    <h2 class="faq-title">Perguntas Frequentes</h2>
+    <p class="faq-subtitle">As principais dúvidas sobre devoluções e reembolsos.</p>
+
+    <!-- Item 1 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Qual é o prazo para devolução?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        O prazo é de até <strong>7 dias corridos</strong> após o recebimento do produto, conforme previsto no Código de Defesa do Consumidor.
+      </div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Como recebo meu reembolso?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        O reembolso é feito pelo mesmo método de pagamento utilizado, em até <strong>10 dias úteis</strong> após aprovação.
+      </div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Quais produtos não podem ser devolvidos?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Produtos usados, sem embalagem original ou sem nota fiscal não serão aceitos para devolução.
+      </div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Como solicito a devolução?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Basta enviar um e-mail para <strong>suporte@empresa.com</strong> com o número do pedido. Nossa equipe responde em até 48h úteis.
+      </div>
+    </div>
+
+    <!-- Item 5 -->
+    <div class="faq-item">
+      <button class="faq-question">
+        Há custo para devolução?
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        Não. O frete de devolução é gratuito dentro do prazo legal de arrependimento ou em casos de defeito de fabricação.
+      </div>
+    </div>
+  </div>
+</section>
+
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Entre no drop e receba novidades exclusivas</h3>
+      <form>
+        <input type="email" placeholder="Digite seu e-mail">
+        <button type="submit">Inscrever</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <!-- Logo + Descrição -->
+      <div class="footer-brand">
+        <h2>TopStyle</h2>
+        <p>Mais que moda, é movimento.
+          Drops exclusivos, feitos para quem cria tendência.</p>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-links">
+        <div>
+          <h4>Coleções</h4>
+          <ul>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Collabs</a></li>
+            <li><a href="#">Lookbook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Marca</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Na mídia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="guia-tamanho.html">Guia de tamanhos</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Política de devolução</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 TopStyle. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+<script src="assets/js/rodape.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novidades</title>
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/modelo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="assets/css/novidades.css">
+  <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Carrinho lateral -->
+  <div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <span class="close-cart">✖</span>
+    </div>
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="coupon">
+        <input type="text" id="cupom-input" placeholder="Digite seu cupom">
+        <button id="apply-coupon">Aplicar</button>
+      </div>
+
+      <div class="resumo">
+        <div><span>Subtotal:</span> <span id="subtotal">R$0,00</span></div>
+        <div><span>Desconto:</span> <span id="desconto">R$0,00</span></div>
+        <div class="total-final"><span>Total:</span> <span id="total">R$0,00</span></div>
+      </div>
+
+      <button class="checkout">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Modal Finalizar Compra -->
+  <div class="finalizar-overlay" id="finalizarOverlay">
+    <div class="finalizar-modal">
+      <div class="finalizar-header">
+        <h2>Finalizar Compra</h2>
+        <span id="fecharFinalizar">✖</span>
+      </div>
+
+      <div class="finalizar-body">
+        <!-- Formulário do Cliente -->
+        <div class="finalizar-info">
+          <h3>Dados Pessoais</h3>
+          <input type="text" id="nome" placeholder="Nome completo" required>
+          <input type="text" id="endereco" placeholder="Endereço completo" required>
+          <input type="text" id="cidade" placeholder="Cidade" required>
+          <input type="text" id="cep" placeholder="CEP" required>
+          <input type="text" id="telefone" placeholder="Telefone para contato" required>
+
+          <h3>Forma de Pagamento</h3>
+          <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+          <label><input type="radio" name="pagamento" value="cartao"> Cartão de Crédito</label>
+
+          <div id="pagamentoCartao" class="hidden">
+            <input type="text" id="nome-cartao" placeholder="Nome impresso no cartão">
+            <input type="text" id="numero-cartao" placeholder="Número do cartão" maxlength="19">
+            <label class="label-validade">Validade do cartão:</label>
+            <input type="month" id="validade-cartao">
+            <input type="text" id="cvv-cartao" placeholder="CVV" maxlength="4">
+          </div>
+
+          <button id="confirmarCompra" class="btn-confirmar">Confirmar Compra</button>
+        </div>
+
+        <!-- Resumo lateral -->
+        <div class="finalizar-resumo">
+          <h3>Resumo do Pedido</h3>
+          <div id="finalizarResumoItens"></div>
+          <div class="finalizar-total">
+            <p><strong>Total:</strong> <span id="finalizarTotal">R$0,00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <!-- Botão hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Menu Esquerda -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="masculino.html">Masculino</a></li>
+        <li><a href="feminino.html">Feminino</a></li>
+        <li><a href="novidades.html">Novidades</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo Centro -->
+    <div class="logo">
+      <a href="base.html"><img src="img/logo_ts_transparent.png" alt=""></a>
+    </div>
+
+    <!-- Ícones Direita -->
+    <div class="icons">
+      <a id="search-icon"><i class="bi bi-search"></i></a>
+      <div class="cart-btn"><i class="bi bi-bag"></i> <span class="cart-count">0</span></div>
+      <a href="index.html"><i class="bi bi-person"></i></a>
+      <a href="" class="admin-icon hidden"><i class="bi bi-incognito"></i></a>
+    </div>
+  </header>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar produtos..." />
+    <button id="close-search"><i class="bi bi-x"></i></button>
+  </div>
+
+  <div class="novidades-base">
+    <div class="section-title">
+      <h2>NOVIDADES</h2>
+      <span>DROP & STYLE</span>
+    </div>
+
+    <!-- Painel de Filtros -->
+    <div class="filter-panel" id="filterPanel">
+      <div class="filter-header">
+        <h3>Filtros</h3>
+        <button id="closeFilter" class="close-btn">&times;</button>
+      </div>
+
+      <div class="filter-body">
+        <div class="filter-group">
+          <h4>Categoria</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="categoria" value="camiseta"> Camiseta</label>
+            <label><input type="checkbox" name="categoria" value="calca"> Calça</label>
+            <label><input type="checkbox" name="categoria" value="jaqueta"> Jaqueta</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Tamanho</h4>
+          <div class="size-buttons">
+            <button data-size="P">P</button>
+            <button data-size="M">M</button>
+            <button data-size="G">G</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Disponibilidade</h4>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="disponibilidade" value="estoque"> Em Estoque</label>
+            <label><input type="checkbox" name="disponibilidade" value="esgotado"> Esgotado</label>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <h4>Preço Máximo</h4>
+          <input type="range" id="priceRange" min="0" max="500" value="500">
+          <p class="price-text">Até <strong>R$ <span id="priceValue">500</span></strong></p>
+        </div>
+      </div>
+
+      <div class="filter-actions">
+        <button id="applyFilters">Aplicar</button>
+        <button id="clearFilters" class="clear">Limpar</button>
+      </div>
+    </div>
+
+    <!-- Botão para abrir filtros -->
+    <button class="frame-btn" id="openFilterBtn">
+      <span class="frame-btn__outline frame-btn__outline--tall">
+        <span class="frame-btn__line frame-btn__line--tall"></span>
+        <span class="frame-btn__line frame-btn__line--flat"></span>
+      </span>
+      <span class="frame-btn__outline frame-btn__outline--flat">
+        <span class="frame-btn__line frame-btn__line--tall"></span>
+        <span class="frame-btn__line frame-btn__line--flat"></span>
+      </span>
+      <span class="frame-btn__solid"></span>
+      <span class="frame-btn__text"><i class="bi bi-funnel"></i> Filtros</span>
+    </button>
+
+    <div class="novidades-base-card" id="novidades-list">
+      <div class="boy-card-inter">
+        <div class="boy-card-img">
+          <img src="img/Modelo-01.webp" alt="">
+        </div>
+        <div class="boy-card-info">
+          <div class="boy-card-inform">
+            <h2>Roupa bonita e bonita</h2>
+            <p>R$ 45,00</p>
+          </div>
+          <div class="boy-card-link"><a href="">&leftrightsquigarrow;</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão para adicionar novo produto -->
+  <button id="novidades-addProduct">Adicionar Produto</button>
+
+  <!-- Modal Novidades -->
+  <div id="novidades-modal" class="novidades-modal hidden">
+    <div class="novidades-modal-content">
+      <span class="novidades-close">&times;</span>
+      <h2 id="novidades-modalTitle">Adicionar Produto</h2>
+
+      <form id="novidades-form">
+        <label>Nome:</label>
+        <input type="text" id="novidades-modalName" required>
+
+        <label>Preço:</label>
+        <input type="number" step="0.01" id="novidades-modalPrice" required>
+
+        <label>URL da Imagem:</label>
+        <input type="text" id="novidades-modalImg" required>
+
+        <label>Link do Produto:</label>
+        <input type="text" id="novidades-modalLink" required>
+
+        <label>Categoria:</label>
+        <select id="novidades-modalCategoria" required>
+          <option value="camiseta">Camiseta</option>
+          <option value="calca">Calça</option>
+          <option value="jaqueta">Jaqueta</option>
+        </select>
+
+        <label>Tamanho:</label>
+        <select id="novidades-modalTamanho" required>
+          <option value="P">P</option>
+          <option value="M">M</option>
+          <option value="G">G</option>
+        </select>
+
+        <label>Disponibilidade:</label>
+        <select id="novidades-modalDisponibilidade" required>
+          <option value="estoque">Em Estoque</option>
+          <option value="esgotado">Esgotado</option>
+        </select>
+
+        <button type="submit" id="novidades-modalSubmit">Salvar</button>
+      </form>
+
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-newsletter">
+      <h3>Entre no drop e receba novidades exclusivas</h3>
+      <form>
+        <input type="email" placeholder="Digite seu e-mail">
+        <button type="submit">Inscrever</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <div class="footer-brand">
+        <h2>TopStyle</h2>
+        <p>Mais que moda, é movimento. Drops exclusivos, feitos para quem cria tendência.</p>
+      </div>
+
+      <div class="footer-links">
+        <div>
+          <h4>Coleções</h4>
+          <ul>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Collabs</a></li>
+            <li><a href="#">Lookbook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Marca</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Na mídia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="guia-tamanho.html">Guia de tamanhos</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Política de devolução</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 TopStyle. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Supabase SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/carrinho.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script type="module" src="assets/js/novidades.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia de Tamanhos</title>
+  <link rel="stylesheet" href="assets/css/rodape-link.css">
+  <link rel="stylesheet" href="assets/css/modelo.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <!-- Carrinho lateral -->
+  <div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <span class="close-cart">✖</span>
+    </div>
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="coupon">
+        <input type="text" id="cupom-input" placeholder="Digite seu cupom">
+        <button id="apply-coupon">Aplicar</button>
+      </div>
+
+      <div class="resumo">
+        <div><span>Subtotal:</span> <span id="subtotal">R$0,00</span></div>
+        <div><span>Desconto:</span> <span id="desconto">R$0,00</span></div>
+        <div class="total-final"><span>Total:</span> <span id="total">R$0,00</span></div>
+      </div>
+
+      <button class="checkout">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Modal Finalizar Compra -->
+  <div class="finalizar-overlay" id="finalizarOverlay">
+    <div class="finalizar-modal">
+      <div class="finalizar-header">
+        <h2>Finalizar Compra</h2>
+        <span id="fecharFinalizar">✖</span>
+      </div>
+
+      <div class="finalizar-body">
+        <!-- Formulário do Cliente -->
+        <div class="finalizar-info">
+          <h3>Dados Pessoais</h3>
+          <input type="text" id="nome" placeholder="Nome completo" required>
+          <input type="text" id="endereco" placeholder="Endereço completo" required>
+          <input type="text" id="cidade" placeholder="Cidade" required>
+          <input type="text" id="cep" placeholder="CEP" required>
+          <input type="text" id="telefone" placeholder="Telefone para contato" required>
+
+          <h3>Forma de Pagamento</h3>
+          <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+          <label><input type="radio" name="pagamento" value="cartao"> Cartão de Crédito</label>
+
+          <div id="pagamentoCartao" class="hidden">
+            <input type="text" id="nome-cartao" placeholder="Nome impresso no cartão">
+            <input type="text" id="numero-cartao" placeholder="Número do cartão" maxlength="19">
+            <label class="label-validade">Validade do cartão:</label>
+            <input type="month" id="validade-cartao">
+            <input type="text" id="cvv-cartao" placeholder="CVV" maxlength="4">
+          </div>
+
+          <button id="confirmarCompra" class="btn-confirmar">Confirmar Compra</button>
+        </div>
+
+        <!-- Resumo lateral -->
+        <div class="finalizar-resumo">
+          <h3>Resumo do Pedido</h3>
+          <div id="finalizarResumoItens"></div>
+          <div class="finalizar-total">
+            <p><strong>Total:</strong> <span id="finalizarTotal">R$0,00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <!-- Botão hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Overlay -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Menu Esquerda -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="masculino.html">Masculino</a></li>
+        <li><a href="feminino.html">Feminino</a></li>
+        <li><a href="novidades.html">Novidades</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo Centro -->
+    <div class="logo">
+      <a href="base.html"><img src="img/logo_ts_transparent.png" alt=""></a>
+    </div>
+
+    <!-- Ícones Direita -->
+    <div class="icons">
+      <a id="search-icon"><i class="bi bi-search"></i></a>
+      <div class="cart-btn"><i class="bi bi-bag"></i> <span class="cart-count">0</span></div>
+      <a href="index.html"><i class="bi bi-person"></i></a>
+      <!-- já começa escondido -->
+      <a href="" class="admin-icon hidden"><i class="bi bi-incognito"></i></a>
+    </div>
+  </header>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar produtos..." />
+    <button id="close-search"><i class="bi bi-x"></i></button>
+  </div>
+
+  <h1 class="guide-title">Guia de Tamanhos</h1>
+
+  <div class="guide-grid">
+    <!-- Blusas e Moletons -->
+    <div class="guide-size-card">
+      <h2>Blusas & Moletons</h2>
+      <table class="guide-table">
+        <tr>
+          <th>Tamanho</th>
+          <th>Peito (cm)</th>
+          <th>Comprimento (cm)</th>
+          <th>Mangas (cm)</th>
+        </tr>
+        <tr>
+          <td>P</td>
+          <td>88-92</td>
+          <td>65</td>
+          <td>60</td>
+        </tr>
+        <tr>
+          <td>M</td>
+          <td>96-100</td>
+          <td>68</td>
+          <td>61</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>104-108</td>
+          <td>71</td>
+          <td>62</td>
+        </tr>
+        <tr>
+          <td>GG</td>
+          <td>112-116</td>
+          <td>74</td>
+          <td>63</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Shorts -->
+    <div class="guide-size-card">
+      <h2>Shorts</h2>
+      <table class="guide-table">
+        <tr>
+          <th>Tamanho</th>
+          <th>Cintura (cm)</th>
+          <th>Quadril (cm)</th>
+          <th>Comprimento (cm)</th>
+        </tr>
+        <tr>
+          <td>P</td>
+          <td>72-76</td>
+          <td>92-96</td>
+          <td>40</td>
+        </tr>
+        <tr>
+          <td>M</td>
+          <td>78-82</td>
+          <td>98-102</td>
+          <td>42</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>84-88</td>
+          <td>104-108</td>
+          <td>44</td>
+        </tr>
+        <tr>
+          <td>GG</td>
+          <td>90-94</td>
+          <td>110-114</td>
+          <td>46</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Calças -->
+    <div class="guide-size-card">
+      <h2>Calças</h2>
+      <table class="guide-table">
+        <tr>
+          <th>Tamanho</th>
+          <th>Cintura (cm)</th>
+          <th>Quadril (cm)</th>
+          <th>Comprimento (cm)</th>
+        </tr>
+        <tr>
+          <td>P</td>
+          <td>72-76</td>
+          <td>92-96</td>
+          <td>100</td>
+        </tr>
+        <tr>
+          <td>M</td>
+          <td>78-82</td>
+          <td>98-102</td>
+          <td>104</td>
+        </tr>
+        <tr>
+          <td>G</td>
+          <td>84-88</td>
+          <td>104-108</td>
+          <td>108</td>
+        </tr>
+        <tr>
+          <td>GG</td>
+          <td>90-94</td>
+          <td>110-114</td>
+          <td>112</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Entre no drop e receba novidades exclusivas</h3>
+      <form>
+        <input type="email" placeholder="Digite seu e-mail">
+        <button type="submit">Inscrever</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <!-- Logo + Descrição -->
+      <div class="footer-brand">
+        <h2>TopStyle</h2>
+        <p>Mais que moda, é movimento.
+          Drops exclusivos, feitos para quem cria tendência.</p>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-links">
+        <div>
+          <h4>Coleções</h4>
+          <ul>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Collabs</a></li>
+            <li><a href="#">Lookbook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Marca</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Na mídia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="guia-tamanho.html">Guia de tamanhos</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Política de devolução</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 TopStyle. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/carrinho.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

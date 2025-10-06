@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head> 
+
+<body>
+
+    <main>
+    <section class="block__left">
+      <div class="left__top">
+        <div class="logo">
+          <img src="img/Logo.png" alt="">
+        </div>
+      </div>
+      <div class="left__center">
+        <h1>Login</h1>
+        <p>“Streetwear premium para quem vive a cultura urbana.”</p>
+        <div class="center__form">
+          <!-- 🚀 form com id para capturar no JS -->
+          <form id="loginForm">
+            <div class="input__container">
+              <label for="email"><img src="img/usuário.png" alt=""></label>
+              <input type="email" id="email" placeholder="Email" required>
+            </div>
+            <div class="input__container">
+              <label for="senha"><img src="img/cadeado.png" alt=""></label>
+              <input type="password" id="senha" placeholder="Senha" required>
+              <img id="toggleSenha" src="img/olho (1).png" width="24" height="25px">
+            </div>
+            <div class="input__opt">
+              <div class="opt__left">
+                <input type="checkbox" id="remember">
+                <label for="remember">Lembrar email</label>
+              </div>
+              <div class="opt__right">
+                <a href="#">Esqueceu sua senha?</a>
+              </div>
+            </div>
+            <button type="submit" id="submitBtn" class="button-log">ENTRAR</button>
+            <!-- 🔔 espaço para mensagens -->
+            <div id="message" class="message"></div>
+          </form>
+          <hr>
+        </div>
+      </div>
+      <div class="left__bottom">
+        <div class="redes">
+          <div class="redes__icon"><img src="img/google.png" alt=""></div>
+          <div class="redes__icon"><img src="img/facebook.png" alt=""></div>
+          <div class="redes__icon"><img src="img/apple-big-logo.png" alt=""></div>
+        </div>
+        <p class="p_bottom">Não possui uma conta? <a href="cadastro.html">Criar conta.</a></p>
+        <p class="text__bottom">TopStyle – A revolução do streetwear começa aqui.</p>
+      </div>
+    </section>
+    <section class="block__right"></section>
+  </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

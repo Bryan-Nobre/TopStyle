@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Policy</title>
+    <link rel="stylesheet" href="assets/css/rodape-link.css">
+    <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+      <!-- Carrinho lateral -->
+  <div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <span class="close-cart">✖</span>
+    </div>
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="coupon">
+        <input type="text" id="cupom-input" placeholder="Digite seu cupom">
+        <button id="apply-coupon">Aplicar</button>
+      </div>
+
+      <div class="resumo">
+        <div><span>Subtotal:</span> <span id="subtotal">R$0,00</span></div>
+        <div><span>Desconto:</span> <span id="desconto">R$0,00</span></div>
+        <div class="total-final"><span>Total:</span> <span id="total">R$0,00</span></div>
+      </div>
+
+      <button class="checkout">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <header>
+    <!-- Menu Esquerda -->
+    <nav>
+      <ul>
+        <li><a href="masculino.html">Masculino</a></li>
+        <li><a href="feminino.html">Feminino</a></li>
+        <li><a href="novidades.html">Novidades</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo Centro -->
+    <div class="logo"><a href="base.html"><img src="img/logo_ts_transparent.png" alt=""></a></div>
+
+    <!-- Ícones Direita -->
+    <div class="icons">
+      <a id="search-icon"><i class="bi bi-search"></i></a>
+      <div class="cart-btn"><i class="bi bi-bag"></i> <span class="cart-count">0</span></div>
+      <a href="index.html"><i class="bi bi-person"></i></a>
+    </div>
+  </header>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar produtos..." />
+    <button id="close-search"><i class="bi bi-x"></i></button>
+  </div>
+
+    <!-- Bloco de Política de Devolução -->
+    <div class="policy-container">
+        <h2 class="policy-title">Política de Devolução</h2>
+
+        <div class="policy-section">
+            <h3 class="policy-subtitle">Direito de Arrependimento</h3>
+            <p class="policy-text">
+                O cliente possui até <strong>7 dias corridos</strong> após o recebimento do produto para solicitar a
+                devolução, conforme previsto no Código de Defesa do Consumidor.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h3 class="policy-subtitle">Condições para Devolução</h3>
+            <ul class="policy-list">
+                <li>O produto deve estar em perfeitas condições, sem sinais de uso.</li>
+                <li>É obrigatória a devolução na embalagem original, incluindo acessórios e manuais.</li>
+                <li>A nota fiscal da compra deve ser apresentada.</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h3 class="policy-subtitle">Procedimento</h3>
+            <p class="policy-text">
+                Para iniciar o processo de devolução, entre em contato com nosso suporte através do e-mail
+                <strong>suporte@empresa.com</strong>. Nossa equipe responderá em até <strong>48 horas úteis</strong>.
+            </p>
+        </div>
+
+        <div class="policy-section">
+            <h3 class="policy-subtitle">Reembolso</h3>
+            <p class="policy-text">
+                O valor será reembolsado pelo mesmo método de pagamento em até <strong>10 dias úteis</strong> após o
+                recebimento e análise do produto.
+            </p>
+        </div>
+    </div>
+
+</body>
+
+</html>

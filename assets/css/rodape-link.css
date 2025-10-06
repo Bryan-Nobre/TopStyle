@@ -1,0 +1,260 @@
+/* Reset e base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.guide-title {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 102px;
+}
+
+.guide-size-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.guide-size-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+.guide-size-card>h2 {
+  background: #1c1c1c;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.5rem;
+}
+
+.guide-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.guide-table th,
+.guide-table td {
+  padding: 12px 10px;
+  text-align: center;
+}
+
+.guide-table th {
+  background: #ffffff;
+  color: #1c1c1c;
+  font-weight: 600;
+}
+
+.guide-table tr:nth-child(even) {
+  background: #fafafa;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .guide-title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+
+  .guide-table th,
+  .guide-table td {
+    padding: 8px 5px;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===== Bloco da Política de Devolução ===== */
+.policy-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+  background: #1a1a1a;
+  border-radius: 14px;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+  border: 1px solid #2c2c2c;
+}
+
+.policy-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  letter-spacing: 1px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 1rem;
+}
+
+.policy-section {
+  margin-bottom: 2rem;
+}
+
+.policy-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+  color: #e0e0e0;
+  border-left: 4px solid #444;
+  padding-left: 12px;
+}
+
+.policy-text {
+  color: #bbb;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.policy-list {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+.policy-list li {
+  margin-bottom: 0.9rem;
+  position: relative;
+  padding-left: 1.2rem;
+  color: #ccc;
+}
+
+.policy-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #888;
+  font-size: 1rem;
+}
+
+/* Hover refinado */
+.policy-list li:hover {
+  color: #fff;
+  transition: color 0.3s ease;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .policy-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+  .policy-title {
+    font-size: 1.6rem;
+  }
+
+  .policy-subtitle {
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Estilo FAQ ===== */
+.faq-section {
+  background: #111;
+  padding: 4rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.faq-container {
+  max-width: 700px;
+  width: 100%;
+  background: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 14px;
+  border: 1px solid #2c2c2c;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.05);
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.5rem;
+}
+
+.faq-subtitle {
+  text-align: center;
+  color: #aaa;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.faq-item {
+  border-bottom: 1px solid #2c2c2c;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 1rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: #fff;
+}
+
+.faq-icon {
+  font-size: 1.3rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+  color: #888;
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1rem;
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.6;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  padding: 1rem;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .faq-container {
+    padding: 1.5rem;
+  }
+
+  .faq-title {
+    font-size: 1.6rem;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+}

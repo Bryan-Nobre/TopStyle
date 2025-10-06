@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicial</title>
+  <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/modelo.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet"
+    href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <!-- Carrinho lateral -->
+  <div class="cart" id="cart">
+    <div class="cart-header">
+      <h3>Meu Carrinho</h3>
+      <span class="close-cart">✖</span>
+    </div>
+    <div class="cart-items"></div>
+
+    <div class="cart-footer">
+      <div class="coupon">
+        <input type="text" id="cupom-input" placeholder="Digite seu cupom">
+        <button id="apply-coupon">Aplicar</button>
+      </div>
+
+      <div class="resumo">
+        <div><span>Subtotal:</span> <span id="subtotal">R$0,00</span></div>
+        <div><span>Desconto:</span> <span id="desconto">R$0,00</span></div>
+        <div class="total-final"><span>Total:</span> <span id="total">R$0,00</span></div>
+      </div>
+
+      <button class="checkout">Finalizar Compra</button>
+    </div>
+  </div>
+
+  <!-- Modal Finalizar Compra -->
+  <div class="finalizar-overlay" id="finalizarOverlay">
+    <div class="finalizar-modal">
+      <div class="finalizar-header">
+        <h2>Finalizar Compra</h2>
+        <span id="fecharFinalizar">✖</span>
+      </div>
+
+      <div class="finalizar-body">
+        <!-- Formulário do Cliente -->
+        <div class="finalizar-info">
+          <h3>Dados Pessoais</h3>
+          <input type="text" id="nome" placeholder="Nome completo" required>
+          <input type="text" id="endereco" placeholder="Endereço completo" required>
+          <input type="text" id="cidade" placeholder="Cidade" required>
+          <input type="text" id="cep" placeholder="CEP" required>
+          <input type="text" id="telefone" placeholder="Telefone para contato" required>
+
+          <h3>Forma de Pagamento</h3>
+          <label><input type="radio" name="pagamento" value="pix"> PIX</label>
+          <label><input type="radio" name="pagamento" value="cartao"> Cartão de Crédito</label>
+
+          <div id="pagamentoCartao" class="hidden">
+            <input type="text" id="nome-cartao" placeholder="Nome impresso no cartão">
+            <input type="text" id="numero-cartao" placeholder="Número do cartão" maxlength="19">
+            <label class="label-validade">Validade do cartão:</label>
+            <input type="month" id="validade-cartao">
+            <input type="text" id="cvv-cartao" placeholder="CVV" maxlength="4">
+          </div>
+
+          <button id="confirmarCompra" class="btn-confirmar">Confirmar Compra</button>
+        </div>
+
+        <!-- Resumo lateral -->
+        <div class="finalizar-resumo">
+          <h3>Resumo do Pedido</h3>
+          <div id="finalizarResumoItens"></div>
+          <div class="finalizar-total">
+            <p><strong>Total:</strong> <span id="finalizarTotal">R$0,00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <header>
+    <!-- Botão hambúrguer -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <!-- Overlay -->
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Menu Esquerda -->
+    <nav class="sidebar" id="sidebar">
+      <ul>
+        <li><a href="masculino.html">Masculino</a></li>
+        <li><a href="feminino.html">Feminino</a></li>
+        <li><a href="novidades.html">Novidades</a></li>
+      </ul>
+    </nav>
+
+    <!-- Logo Centro -->
+    <div class="logo">
+      <a href="base.html"><img src="img/logo_ts_transparent.png" alt=""></a>
+    </div>
+
+    <!-- Ícones Direita -->
+    <div class="icons">
+      <a id="search-icon"><i class="bi bi-search"></i></a>
+      <div class="cart-btn"><i class="bi bi-bag"></i> <span class="cart-count">0</span></div>
+      <a href="index.html"><i class="bi bi-person"></i></a>
+      <!-- já começa escondido -->
+      <a href="" class="admin-icon hidden"><i class="bi bi-incognito"></i></a>
+    </div>
+  </header>
+
+  <!-- Barra de pesquisa -->
+  <div class="search-bar">
+    <input type="text" placeholder="Buscar produtos..." />
+    <button id="close-search"><i class="bi bi-x"></i></button>
+  </div>
+
+  <main>
+
+    <section class="initial">
+      <img src="img/INITIAL.png" alt="">
+      <h1>personalização</h1>
+      <div class="buton-persona">
+        <a href="">
+          <div class="acriar">CRIAR</div>
+        </a>
+      </div>
+    </section>
+
+    <div class="marquee">
+      <div class="marquee-track" id="marquee-track">
+        <span>Não segue tendência, cria</span>
+        <span><i class="bi bi-star-fill"></i></span>
+        <span>Exclusivo na rua, eterno no estilo</span>
+        <span><i class="bi bi-star-fill"></i></span>
+        <span>Use o futuro</span>
+        <span><i class="bi bi-star-fill"></i></span>
+        <span>TopStyle: não é moda, é movimento</span>
+        <span><i class="bi bi-star-fill"></i></span>
+      </div>
+    </div>
+
+    <section class="options-modal">
+      <h1>Categorias</h1>
+      <section class="options-modal-block">
+        <div class="block-modal">
+          <img src="img/Camisas.png" alt="">
+          <a href="camisas.html">
+            <div class="hover-block-modal">
+              <span>Camisas</span>
+              <span>Camisas</span>
+              <span>Camisas</span>
+              <span>Camisas</span>
+              <span>Camisas</span>
+            </div>
+          </a>
+        </div>
+        <div class="block-modal">
+          <img src="img/Moletom.png" alt="">
+          <a href="moletons.html">
+            <div class="hover-block-modal">
+              <span>Moletons</span>
+              <span>Moletons</span>
+              <span>Moletons</span>
+              <span>Moletons</span>
+              <span>Moletons</span>
+            </div>
+          </a>
+        </div>
+        <div class="block-modal">
+          <img src="img/Short.png" alt="">
+          <a href="shorts.html">
+            <div class="hover-block-modal">
+              <span>Shorts</span>
+              <span>Shorts</span>
+              <span>Shorts</span>
+              <span>Shorts</span>
+              <span>Shorts</span>
+            </div>
+          </a>
+        </div>
+        <div class="block-modal">
+          <img src="img/Calça.png" alt="">
+          <a href="calca.html">
+            <div class="hover-block-modal">
+              <span>Calças</span>
+              <span>Calças</span>
+              <span>Calças</span>
+              <span>Calças</span>
+              <span>Calças</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </section>
+
+    <section class="emphasis">
+      <div class="emphasis-top">
+        <div class="emphasis-top-left">
+          <h2>Drop Exclusivo</h2>
+          <p>Mais que hype, é identidade</p>
+        </div>
+        <div class="emphasis-top-right">
+          <a href="novidades.html">Ver mais &RightArrow;</a>
+        </div>
+      </div>
+
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper" id="product-list">
+
+          <!-- Produto exemplo -->
+          <div class="swiper-slide product-item">
+            <div class="product-card">
+              <div class="img-cloth">
+                <img src="img/MODELO01F.webp" alt="Camiseta Streetwear">
+                <div class="product-actions">
+                  <a href="Blusa-modelo01.html" class="btn-details">Ver detalhes</a>
+                </div>
+              </div>
+              <div class="name-cloth-link">
+                <h2><a href="#">Camiseta Streetwear Hoshwear Global Distortion Preta</a></h2>
+                <p><span>R$ 129,00</span></p>
+                <small class="installments">ou 3x de R$ 43,30 sem juros</small>
+              </div>
+
+              <!-- Botões só aparecem se for admin -->
+              <div class="admin-actions hidden">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Excluir</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide product-item">
+            <div class="product-card">
+              <div class="img-cloth">
+                <img src="img/Modelo-02.webp" alt="Camiseta Streetwear">
+                <div class="product-actions">
+                  <a href="Blusa-modelo02.html" class="btn-details">Ver detalhes</a>
+                </div>
+              </div>
+              <div class="name-cloth-link">
+                <h2><a href="#">Camiseta Streetwear Hoshwear Global Distortion Preta</a></h2>
+                <p><span>R$ 129,00</span></p>
+                <small class="installments">ou 3x de R$ 43,30 sem juros</small>
+              </div>
+
+              <!-- Botões só aparecem se for admin -->
+              <div class="admin-actions hidden">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Excluir</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide product-item">
+            <div class="product-card">
+              <div class="img-cloth">
+                <img src="img/Modelo-03.webp" alt="Camiseta Streetwear">
+                <div class="product-actions">
+                  <a href="Blusa-modelo01.html" class="btn-details">Ver detalhes</a>
+                </div>
+              </div>
+              <div class="name-cloth-link">
+                <h2><a href="#">Camiseta Streetwear Hoshwear Global Distortion Preta</a></h2>
+                <p><span>R$ 129,00</span></p>
+                <small class="installments">ou 3x de R$ 43,30 sem juros</small>
+              </div>
+
+              <!-- Botões só aparecem se for admin -->
+              <div class="admin-actions hidden">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Excluir</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide product-item">
+            <div class="product-card">
+              <div class="img-cloth">
+                <img src="img/Modelo-04.webp" alt="Camiseta Streetwear">
+                <div class="product-actions">
+                  <a href="Blusa-modelo01.html" class="btn-details">Ver detalhes</a>
+                </div>
+              </div>
+              <div class="name-cloth-link">
+                <h2><a href="#">Camiseta Streetwear Hoshwear Global Distortion Preta</a></h2>
+                <p><span>R$ 129,00</span></p>
+                <small class="installments">ou 3x de R$ 43,30 sem juros</small>
+              </div>
+
+              <!-- Botões só aparecem se for admin -->
+              <div class="admin-actions hidden">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Excluir</button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide product-item">
+            <div class="product-card">
+              <div class="img-cloth">
+                <img src="img/Modelo-01.webp" alt="Camiseta Streetwear">
+                <div class="product-actions">
+                  <a href="Blusa-modelo01.html" class="btn-details">Ver detalhes</a>
+                </div>
+              </div>
+              <div class="name-cloth-link">
+                <h2><a href="#">Camiseta Streetwear Hoshwear Global Distortion Preta</a></h2>
+                <p><span>R$ 129,00</span></p>
+                <small class="installments">ou 3x de R$ 43,30 sem juros</small>
+              </div>
+
+              <!-- Botões só aparecem se for admin -->
+              <div class="admin-actions hidden">
+                <button class="btn-edit">Editar</button>
+                <button class="btn-delete">Excluir</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Adicionar produto (só admin vê) -->
+        <div class="admin-actions hidden add-product-btn">
+          <button id="addProduct">+ Adicionar Produto</button>
+        </div>
+        <br><br>
+
+        <div class="swiper-pagination"></div>
+      </div>
+
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <!-- Newsletter -->
+    <div class="footer-newsletter">
+      <h3>Entre no drop e receba novidades exclusivas</h3>
+      <form>
+        <input type="email" placeholder="Digite seu e-mail">
+        <button type="submit">Inscrever</button>
+      </form>
+    </div>
+
+    <div class="footer-main">
+      <!-- Logo + Descrição -->
+      <div class="footer-brand">
+        <h2>TopStyle</h2>
+        <p>Mais que moda, é movimento.
+          Drops exclusivos, feitos para quem cria tendência.</p>
+      </div>
+
+      <!-- Links -->
+      <div class="footer-links">
+        <div>
+          <h4>Coleções</h4>
+          <ul>
+            <li><a href="#">Novidades</a></li>
+            <li><a href="#">Drops</a></li>
+            <li><a href="#">Collabs</a></li>
+            <li><a href="#">Lookbook</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Marca</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Na mídia</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Ajuda</h4>
+          <ul>
+            <li><a href="guia-tamanho.html">Guia de tamanhos</a></li>
+            <li><a href="#">Suporte</a></li>
+            <li><a href="#">Política de devolução</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom -->
+    <div class="footer-bottom">
+      <p>© 2025 TopStyle. Todos os direitos reservados.</p>
+      <div class="footer-legal">
+        <a href="#">Termos</a>
+        <a href="#">Privacidade</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
+<!-- Modal principal -->
+<div id="adminModalOverlay" class="hidden">
+  <div class="modal">
+    <h2 id="adminModalTitle">Adicionar Produto</h2>
+    <form id="adminProductForm">
+      <input id="prodImg" name="prodImg" placeholder="URL da imagem">
+      <input id="prodName" name="prodName" placeholder="Nome do produto">
+      <input id="prodPrice" name="prodPrice" placeholder="Preço">
+      <input id="prodInstallments" name="prodInstallments" placeholder="Parcelas">
+      <input id="prodDetails" name="prodDetails" placeholder="Link de detalhes">
+      <div class="modal-actions">
+        <button type="submit">Salvar</button>
+        <button type="button" id="cancelAdminModal">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- Modal de confirmação -->
+<div id="confirmModalOverlay" class="hidden">
+  <div class="confirm-box">
+    <p id="confirmMessage"></p>
+    <div class="confirm-actions">
+      <button id="confirmYes">Sim</button>
+      <button id="confirmNo">Não</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Toast Notification -->
+<div id="toast">
+  <span class="toast-icon"></span>
+  <div class="toast-message"></div>
+</div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="assets/js/carrinho.js"></script>
+  <script src="assets/js/script.js"></script>
+
+</body>
+
+</html>

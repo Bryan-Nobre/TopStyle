@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+  <main>
+    <section class="block__left">
+      <div class="left__top">
+        <div class="logo">
+          <img src="img/Logo.png" alt="">
+        </div>
+      </div>
+
+      <div class="left__center">
+        <h1>Cadastrar</h1>
+        <p>“Crie sua conta e entre para a cultura urbana.”</p>
+
+        <div class="center__form">
+          <!-- 🚀 Formulário de cadastro -->
+          <form id="registerForm">
+            <div class="input__container">
+              <label for="cadastroEmail"><img src="img/usuário.png" alt=""></label>
+              <input type="email" id="cadastroEmail" placeholder="Email" required>
+            </div>
+
+            <div class="input__container">
+              <label for="cadastroSenha"><img src="img/cadeado.png" alt=""></label>
+              <input type="password" id="cadastroSenha" placeholder="Senha" required>
+              <img id="toggleSenha" class="toggleSenha" src="img/olho (1).png" width="24" height="25px">
+            </div>
+
+            <div class="input__container">
+              <label for="cadastroSenha2"><img src="img/cadeado.png" alt=""></label>
+              <input type="password" id="cadastroSenha2" placeholder="Confirmar Senha" required>
+              <img id="toggleSenha" class="toggleSenha" src="img/olho (1).png" width="24" height="25px">
+            </div>
+
+            <button type="submit" id="registerBtn" class="button-log">Cadastrar</button>
+
+            <!-- 🔔 espaço para mensagens -->
+            <div id="cadastro-message" class="message"></div>
+          </form>
+          <hr>
+        </div>
+      </div>
+
+      <div class="left__bottom">
+        <div class="redes">
+          <div class="redes__icon"><img src="img/google.png" alt=""></div>
+          <div class="redes__icon"><img src="img/facebook.png" alt=""></div>
+          <div class="redes__icon"><img src="img/apple-big-logo.png" alt=""></div>
+        </div>
+        <p class="p_bottom">Já possui uma conta? <a href="index.html">Entrar.</a></p>
+        <p class="text__bottom">TopStyle – A revolução do streetwear começa aqui.</p>
+      </div>
+    </section>
+    <section class="block__right"></section>
+  </main>
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/cadastro.js"></script>
+
+</body>
+
+</html>
+
