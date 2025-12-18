@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <script src="assets/js/error-logger.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin - TopStyle</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/cupons.css">
+  <link rel="stylesheet" href="assets/css/dashboard.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/mediaquerydash.css">
+  <link rel="stylesheet" href="assets/css/mediaquery-header.css">
+  <link rel="stylesheet" href="assets/css/style-header.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/support-chat.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://i.ibb.co/jPt43z3L/logo-background.png">
+</head>
+
+<body>
+
+  <div id="global-loader" class="page-loading-overlay">
+    <div class="spinner"></div>
+    <p class="loading-text">Carregando sua dashboard...</p>
+  </div>
+
+  <header class="header " id="header">
+    <nav class="nav__container">
+
+      <div class="nav__menu header-divs" id="nav-menu">
+        <ul class="nav__list">
+          <li title="Categorias" class="nav__item dropdown item1" id="nav__item">
+            <div class="header__link">
+              <a href="#categorias" class="nav__link">Categorias</a>
+              <i class="bi bi-caret-down-fill mobile-caret"></i>
+            </div>
+
+            <!-- MEGA MENU INSERIDO AQUI -->
+            <div class="mega-menu">
+              <div class="mega-content">
+                <div class="column">
+                  <h3><span class="column__title">Vestuário</span></h3>
+                  <a href="#" data-link-id="vestuario-ver-todos">Ver Todos</a>
+                  <a href="#" data-link-id="vestuario-camisetas">Camisetas</a>
+                  <a href="#" data-link-id="vestuario-plus-size">Camiseta Plus-Size</a>
+                  <a href="#" data-link-id="vestuario-manga-longa">Camiseta Manga Longa</a>
+                  <a href="#" data-link-id="vestuario-moletons">Moletons</a>
+                  <a href="#" data-link-id="vestuario-jaquetas">Jaquetas E Casacos</a>
+                  <a href="#" data-link-id="vestuario-camisas">Camisas</a>
+                  <a href="#" data-link-id="vestuario-calcas">Calças</a>
+                  <a href="#" data-link-id="vestuario-shorts">Shorts E Bermudas</a>
+                </div>
+
+                <div class="column">
+                  <h3><span class="column__title">Outros</span></h3>
+                  <a href="#" data-link-id="outros-ver-todos">Ver Todos</a>
+                  <a href="#" data-link-id="outros-juvenil">Juvenil</a>
+                  <a href="#" data-link-id="outros-feminino">Feminino</a>
+                  <a href="#" data-link-id="outros-packs">Packs</a>
+                </div>
+
+                <div class="column">
+                  <h3><span class="column__title">Acessórios</span></h3>
+                  <a href="#" data-link-id="acessorios-ver-todos">Ver Todos</a>
+                  <a href="#" data-link-id="acessorios-chaveiros">Chaveiros E Adesivos</a>
+                  <a href="#" data-link-id="acessorios-cuecas">Cuecas</a>
+                  <a href="#" data-link-id="acessorios-gorros">Gorros</a>
+                  <a href="#" data-link-id="acessorios-pochetes">Pochetes</a>
+                  <a href="#" data-link-id="acessorios-mochilas">Mochilas</a>
+                  <a href="#" data-link-id="acessorios-meias">Meias</a>
+                  <a href="#" data-link-id="acessorios-bags">Bags</a>
+                  <a href="#" data-link-id="acessorios-bones">Bonés</a>
+                  <a href="#" data-link-id="acessorios-bucket">Bucket</a>
+                  <a href="#" data-link-id="acessorios-carteiras">Carteiras</a>
+                </div>
+
+                <div class="column">
+                  <h3><span class="column__title">Calçados</span></h3>
+                  <a href="#" data-link-id="calcados-ver-todos">Ver Todos</a>
+                  <a href="#" data-link-id="calcados-chinelos">Chinelos</a>
+                  <a href="#" data-link-id="calcados-tenis">Tênis</a>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li title="Drops" class="nav__item dropdown item1">
+            <div class="header__link">
+              <a href="#drops" class="nav__link">Drops</a>
+              <i class="bi bi-caret-down-fill mobile-caret"></i>
+            </div>
+
+            <!-- MEGA MENU INSERIDO AQUI -->
+            <div class="mega-menu" id="mega-menu-drops">
+              <div class="mega-content" id="mega-content-drops">
+                <div class="mega-imgs">
+                  <div class="drop-column">
+                    <a href="#" class="drop__img"><img
+                        src="https://www.blog.userefuse.com.br/wp-content/uploads/2023/08/3-Raz%C3%B5es-para-Adotar-o-Estilo-Streetwear-em-Suas-Roupas-scaled.jpg"
+                        alt=""></a>
+                    <p class="drop-name">########</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li title="Sobre Nós" class="nav__item dropdown item2">
+            <div class="header__link">
+              <a href="sobre-nos.html" class="nav__link">Sobre</a>
+            </div>
+          </li>
+        </ul>
+
+        <div class="nav__close" id="nav-close">
+          <i class="ri-close-fill"></i>
+        </div>
+      </div>
+
+      <div class="mobile__icons">
+        <div class="nav__burger">
+          <i id="burger" class="material-icons nav__toggle" onclick="clickMenu()">menu</i>
+        </div>
+        <div class="nav__search">
+          <a href="javascript:void(0)" id="open-search-btn-mobile">
+            <i class="ri-search-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="logo-text-container">
+        <h1><a class="logo-text" href="inicial.html">TopStyle <span>| Dashboard</span></a></h1>
+      </div>
+
+      <div class="social-header header-divs">
+        <ul>
+          <li class="social__link" title="Pesquisa">
+            <a href="javascript:void(0)" id="open-search-btn" class="desktop">
+              <i class="ri-search-line"></i>
+            </a>
+          </li>
+
+          <li class="social__link" title="Seu Perfil"><a href="perfil-cliente.html"><i class="ri-user-line"></i></a>
+          </li>
+          <li class="social__link" title="Carrinho">
+            <a href="carrinho.html" class="cart-icon">
+              <i class="ri-shopping-cart-line"></i>
+              <span id="cart-count" class="cart-count">0</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="progress-bar"></div>
+
+    <div id="search-modal" class="search-modal">
+      <div class="search-overlay"></div>
+      <div class="search-content">
+        <div class="search-input-wrapper">
+          <i class="ri-search-line search-icon-input"></i>
+          <input type="text" id="search-input" placeholder="O que você procura? (ex: Camiseta, Streetwear...)">
+          <i class="ri-close-line" id="close-search-btn"></i>
+        </div>
+
+        <div id="search-results" class="search-results">
+        </div>
+      </div>
+    </div>
+
+  </header>
+  <div class="progress-bar"></div>
+
+  <main>
+    <div class="mobile-dash-trigger-container">
+      <button id="btn-dash-menu" class="btn-dash-trigger" onclick="toggleDashSidebar()">
+        <i class="ri-menu-2-line"></i> Menu Admin
+      </button>
+    </div>
+
+    <section class="body-admin">
+      <section class="body-left">
+        <button class="sidebar-close-btn" onclick="toggleDashSidebar()">
+          <i class="ri-close-line"></i>
+        </button>
+        <div class="block-left">
+          <div class="sidebar-profile-header">
+            <div class="sidebar-avatar-wrapper" id="sidebar-avatar-wrapper">
+              <span id="sidebar-initials">AD</span>
+
+              <img id="sidebar-img" src="" style="display:none;" alt="Perfil"
+                onerror="this.style.display='none'; document.getElementById('sidebar-initials').style.display='block';">
+            </div>
+
+            <div class="sidebar-user-info">
+              <h3 id="sidebar-fullname">Carregando...</h3>
+
+              <div class="user-meta">
+                <span id="sidebar-username">@usuario</span>
+                <span id="sidebar-email">email@exemplo.com</span>
+              </div>
+
+              <div class="user-status-row">
+                <span class="sidebar-role">Admin</span>
+                <p class="sidebar-since">Desde: <span id="sidebar-created">--/--/--</span></p>
+              </div>
+
+              <p id="sidebar-cpf" style="display:none;"></p>
+            </div>
+          </div>
+          <div class="info-block-left">
+            <ul class="menu">
+
+              <!-- MENU (apenas trecho Dashboard mostrado; repita data-target nos outros submenus) -->
+              <li class="menu-item">
+                <span><i class="bi bi-bar-chart-fill"></i> Dashboard (Visão Geral)</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="graficos">Gráficos principais (vendas, usuários, visitas, receita)</li>
+              </ul>
+
+              <li class="menu-item">
+                <span><i class="bi bi-file-earmark-person-fill"></i> Usuários / Clientes</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="usuarios-cadastro">Gestão de administradores</li>
+              </ul>
+
+              <li class="menu-item">
+                <span><i class="bi bi-cart-fill"></i> Produtos / Serviços</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="lista-produto">Produtos</li>
+                <li data-content="cores-produto">Cores</li>
+                <li data-content="categoria-produto">Categorias e filtros</li>
+                <li data-content="drop-produto">Drops</li>
+                <li data-content="controle-header">Header links</li>
+              </ul>
+
+              <li class="menu-item">
+                <span><i class="bi bi-box-seam-fill"></i> Pedidos / Transações</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="cupom">Histórico de cupons</li>
+                <li data-content="status-pedido">Status de cada pedido</li>
+              </ul>
+
+              <li class="menu-item">
+                <span><i class="bi bi-journal-bookmark-fill"></i> Relatórios</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="relatorio-vendas">Produtos mais vendidos</li>
+              </ul>
+
+              <li class="menu-item">
+                <span><i class="bi bi-bell-fill"></i> Notificações</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="notificacao-geral">Toda as Notificações</li>
+                <li data-content="dashboard-tab">Mensagens de usuários</li>
+                <li data-content="system-logs">Logs de Erros (Console)</li>
+              </ul>
+
+              <li class="menu-item" onclick="limparNotificacaoSuporte()">
+                <span style="position: relative;">
+                  <i class="bi bi-chat-dots-fill"></i> Suporte
+                  <span id="suporte-notif-badge" class="notification-dot" style="display: none;"></span>
+                </span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <li data-content="suporte-chat-admin">Chat em Tempo Real</li>
+              </ul>
+
+              <li class="menu-item">
+                <span><i class="bi bi-person-workspace"></i> Perfil do Admin</span>
+                <span class="arrow">▶</span>
+              </li>
+              <ul class="submenu">
+                <a href="perfil-cliente.html">
+                  <li>Dados pessoais</li>
+                </a>
+                <li class="submenu-item" id="btn-alterar-senha-dash" style="cursor: pointer;">
+                  Alterar senha
+                </li>
+                <a href="index.html">
+                  <li>Logout</li>
+                </a>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="body-right">
+
+        <div class="page" id="suporte-chat-admin">
+          <div class="admin-chat-layout">
+
+            <aside class="chat-sidebar">
+              <div class="chat-sidebar-header">
+                <h2>Atendimentos</h2>
+              </div>
+              <div class="chat-contacts-list" id="admin-contacts-list">
+                <div class="loading-contacts">Carregando conversas...</div>
+              </div>
+            </aside>
+
+            <section class="chat-main-window">
+
+              <div class="chat-main-header" id="chat-main-header" style="display:none;">
+
+                <div style="display: flex; align-items: center;">
+
+                  <button class="btn-back-list" onclick="backToContacts()">
+                    <i class="ri-arrow-left-s-line"></i>
+                  </button>
+
+                  <div class="user-profile-trigger" onclick="openProfileFromChat()">
+                    <img id="chat-header-img" src="" alt="">
+                    <div class="chat-header-text">
+                      <h3 id="chat-header-name">Nome do Cliente</h3>
+                      <span id="chat-header-status">Cliente</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="chat-actions">
+                  <button class="btn-end-chat" onclick="endCurrentChat()">
+                    <i class="bi bi-check-circle"></i> <span>Encerrar</span>
+                  </button>
+                </div>
+              </div>
+
+              <div id="chat-empty-state" class="chat-empty-view">
+                <i class="bi bi-chat-square-text"></i>
+                <p>Selecione uma conversa para iniciar o atendimento.</p>
+              </div>
+
+              <div class="chat-messages-area admin-view" id="admin-messages-area" style="display:none;">
+              </div>
+
+              <div class="chat-input-area admin-input" id="admin-input-area" style="display:none;">
+                <form id="admin-chat-form" class="chat-form">
+                  <input type="text" id="admin-message-input" placeholder="Digite sua resposta..." autocomplete="off">
+                  <button type="submit">
+                    <i class="ri-send-plane-fill"></i>
+                  </button>
+                </form>
+              </div>
+
+            </section>
+          </div>
+        </div>
+
+        <div class="page active" id="graficos">
+          <section class="graficos-body">
+
+            <section class="graficos-center">
+              <div class="center-block-vendidos">
+                <div class="icon-center-block-vendidos">
+                  <i class="bi bi-people-fill"></i>
+                </div>
+                <div class="vendidos-text">
+                  <h2 id="total-usuarios">0</h2>
+                  <p>Usuários</p>
+                </div>
+              </div>
+
+              <div class="center-block-criados">
+                <div class="icon-center-block-criados">
+                  <i class="bi bi-hammer"></i>
+                </div>
+                <div class="criados-text">
+                  <h2>0 m</h2>
+                  <p>Criados</p>
+                </div>
+              </div>
+
+              <div class="center-block-produtos">
+                <div class="icon-center-block-produtos">
+                  <i class="bi bi-box-seam"></i>
+                </div>
+                <div class="produtos-text">
+                  <h2 id="total-produtos">0</h2>
+                  <p>Produtos</p>
+                </div>
+              </div>
+
+              <div class="center-block-faturamento">
+                <div class="icon-center-block-faturamento">
+                  <i class="bi bi-truck"></i>
+                </div>
+                <div class="faturamento-text">
+                  <h2 id="total-fornecedores">0</h2>
+                  <p>Fornecedores</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="graficos-bottom">
+              <section class="bottom-left">
+                <div class="block-overall">
+                  <h2>Vendas totais</h2>
+                  <p id="valor-vendas-totais">R$ 0,00</p>
+                </div>
+                <div class="block-Earnings">
+                  <h2>Lucro Bruto</h2>
+                  <p id="valor-lucro-bruto">R$ 0,00</p>
+                </div>
+                <div class="block-Revenue">
+                  <h2>Custo total</h2>
+                  <p id="valor-custo-total">R$ 0,00</p>
+                </div>
+                <div class="block-Customers">
+                  <h2>Lucro Líquido</h2>
+                  <p id="valor-lucro-liquido">0</p>
+                </div>
+
+                <div class="block-button-reports">
+                  <a href="javascript:void(0)" onclick="openFinanceModal()"
+                    style="display: flex; align-items: center; gap: 5px; cursor: pointer; justify-content: center;">
+                    Ver valores exatos
+                  </a>
+                </div>
+              </section>
+
+              <section class="bottom-center">
+                <!-- ====== GRÁFICO DE LINHAS ====== -->
+                <div class="main-chart">
+                  <div class="chart-header">
+                    <h3>Faturamento Mensal</h3>
+                    <div class="chart-controls">
+                      <div class="growth-badge" id="growth-indicator">
+                        <i class="bi bi-graph-up-arrow"></i> <span id="growth-value">0%</span>
+                      </div>
+                      <select id="chart-year-selector" class="chart-select" onchange="atualizarGraficoVendasReal()">
+                        <option value="2025" selected>2025</option>
+                        <option value="2024">2024</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div id="lineChart"></div>
+                </div>
+              </section>
+              <section class="bottom-right">
+                <!-- ====== GRÁFICO DE BARRAS ====== -->
+                <div class="side-card"
+                  style="min-height: 400px; display: flex; flex-direction: column; position: relative;">
+                  <h3 style="margin-bottom: 20px; z-index: 10;">Top 5 Clientes</h3>
+
+                  <div id="podium-container" class="podium-stage">
+                    <div class="podium-loading">Carregando ranking...</div>
+                  </div>
+
+                  <div id="podium-tooltip" class="podium-tooltip hidden">
+                    <div class="tooltip-header">
+                      <img id="tooltip-img" src="" alt="Avatar">
+                    </div>
+                    <div class="tooltip-body">
+                      <h4 id="tooltip-name">Nome</h4>
+                      <span id="tooltip-user">@usuario</span>
+                      <p id="tooltip-email">email@exemplo.com</p>
+                      <div class="tooltip-stats">
+                        <span id="tooltip-total">R$ 0,00</span> em compras
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </section>
+
+            <section class="graficos-footer fade-in">
+              <div class="highlight-wrapper">
+
+                <div class="highlight-header-row">
+                  <h3><i class="bi bi-trophy" style="color: #f59e0b;"></i> Produto Campeão de Vendas</h3>
+                  <span class="live-badge"><span class="blink-dot"></span> Em tempo real</span>
+                </div>
+
+                <div id="dashboard-best-seller-card" class="best-seller-wide-card">
+                  <div class="skeleton-wide">Carregando destaque...</div>
+                </div>
+
+                <div class="highlight-footer-action">
+                  <button onclick="navigateToReports()" class="btn-show-more-dash">
+                    Ver Ranking Completo <i class="bi bi-arrow-right-short"></i>
+                  </button>
+                </div>
+              </div>
+            </section>
+
+          </section>
+        </div>
+
+        <div class="page" id="system-logs">
+          <div class="admin-container">
+            <div class="page-header"
+              style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap:15px;">
+              <div>
+                <h1>Monitoramento de Erros</h1>
+                <p class="cat-subtitle">Histórico de erros ocorridos recentemente.</p>
+              </div>
+              <div style="display: flex; gap: 10px;">
+                <button onclick="loadSystemLogs()" class="cat-btn cat-btn-secondary">
+                  <i class="bi bi-arrow-clockwise"></i> Atualizar
+                </button>
+              </div>
+            </div>
+
+            <div class="cat-stats-grid" style="margin-bottom: 25px;">
+              <div class="cat-stat-card">
+                <div class="cat-stat-icon" style="background:#fee2e2; color:#dc2626;">
+                  <i class="bi bi-bug-fill"></i>
+                </div>
+                <div class="cat-stat-info">
+                  <h3 id="log-count-total">0</h3>
+                  <p>Total de Erros</p>
+                </div>
+              </div>
+              <div class="cat-stat-card">
+                <div class="cat-stat-icon" style="background:#fef3c7; color:#d97706;">
+                  <i class="bi bi-exclamation-triangle-fill"></i>
+                </div>
+                <div class="cat-stat-info">
+                  <h3 id="log-count-today">0</h3>
+                  <p>Nas últimas 24h</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="cat-table-wrapper">
+              <table class="cat-table" id="logs-table">
+                <thead>
+                  <tr>
+                    <th>Data/Hora</th>
+                    <th>Tipo</th>
+                    <th>Mensagem de Erro</th>
+                    <th>Página (URL)</th>
+                    <th style="text-align: right;">Detalhes</th>
+                  </tr>
+                </thead>
+                <tbody id="logs-list-body">
+                </tbody>
+              </table>
+            </div>
+
+            <div id="logs-empty-state" class="hidden" style="text-align: center; padding: 40px; color: #64748b;">
+              <i class="bi bi-shield-check" style="font-size: 3rem; color: #10b981;"></i>
+              <p style="margin-top: 15px;">Sistema estável. Nenhum erro registrado.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="indicadores">
+          <h2>Indicadores Rápidos</h2>
+          <p>KPI, indicadores estratégicos, etc.</p>
+        </div>
+
+        <div class="page" id="usuarios-cadastro">
+          <div class="admin-container admin-container-header">
+
+            <div class="page-header" style="margin-bottom: 25px;">
+              <h1>Gestão de Usuários</h1>
+              <p class="cat-subtitle">Controle os clientes e administradores da loja</p>
+            </div>
+
+            <div class="search-bar-container">
+              <i class="ri-search-line search-icon"></i>
+              <input type="text" id="filtroBusca" placeholder="Pesquisar por nome, email ou ID..."
+                onkeyup="mostrarProfiles()" class="user-search-bar" />
+
+            </div>
+
+            <div id="user-cards-list" class="user-cards-list">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="page" id="relatorio-vendas">
+          <div class="admin-container">
+            <div class="page-header">
+              <h1>Relatório de Vendas</h1>
+              <p class="cat-subtitle">Ranking de produtos por volume de saída</p>
+            </div>
+
+            <div class="report-filters-bar">
+              <div class="filters-best">
+                <div class="filter-group-time">
+                  <button class="filter-btn active" onclick="setReportPeriod('all')">Tudo</button>
+                  <button class="filter-btn" onclick="setReportPeriod('month')">Este Mês</button>
+                  <button class="filter-btn" onclick="setReportPeriod('week')">Esta Semana</button>
+                  <button class="filter-btn" onclick="setReportPeriod('today')">Hoje</button>
+                </div>
+
+                <div class="filter-group-sort">
+                  <label><i class="bi bi-sort-down"></i> Ordenar:</label>
+                  <select id="report-sort-select" onchange="resetAndLoadReport()">
+                    <option value="desc">Mais Vendidos (Desc)</option>
+                    <option value="asc">Menos Vendidos (Asc)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="filter-btn-best">
+                <button onclick="openExportModal()" class="cat-btn cat-btn-primary" style="margin-left: auto;">
+                  <i class="bi bi-file-earmark-pdf-fill"></i> Baixar Relatórios
+                </button>
+              </div>
+
+            </div>
+
+            <div id="report-grid" class="report-grid">
+            </div>
+
+            <div id="report-loader" class="cat-loader hidden"></div>
+
+            <div class="load-more-container">
+              <button id="btn-report-load-more" class="cat-btn cat-btn-secondary hidden" onclick="loadMoreReport()">
+                Ver Mais Produtos <i class="bi bi-chevron-down"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="lista-produto">
+          <section class="list-product ProScrollBox">
+            <h1 class="Proh1">
+              Produtos
+              <button class="ProAddBtn" onclick="addProduct()">+ Adicionar Produto</button>
+            </h1>
+
+            <div id="productGrid" class="ProGrid"></div>
+          </section>
+        </div>
+
+
+        <div class="page page-drop" id="drop-produto">
+          <div class="drop-container">
+            <header class="drop-header-section">
+              <div>
+                <h1>Gestão de Drops</h1>
+                <p class="drop-subtitle">Controle as Drops da loja (Sincronizado com Produtos)</p>
+              </div>
+              <button onclick="dropOpenFormModal('add')" class="drop-btn drop-btn-primary">
+                <i class="bi bi-plus-lg"></i> Nova Drop
+              </button>
+            </header>
+
+            <div id="drop-stats-container" class="drop-stats-grid">
+            </div>
+
+            <div id="drop-loader" class="drop-loader hidden"></div>
+
+            <div id="drop-content" class="hidden">
+              <div class="drop-table-wrapper">
+                <table class="drop-table">
+                  <thead>
+                    <tr>
+                      <th>Drop</th>
+                      <th style="text-align: center;">Qtd. Produtos</th>
+                      <th style="text-align: right;">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="drop-list-body">
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="drop-empty-state" class="hidden">
+                <i class="bi bi-inbox" style="font-size: 40px; margin-bottom: 10px;"></i>
+                <p>Nenhuma Drop encontrada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="cores-produto">
+          <div class="cat-container">
+            <header class="cat-header-section">
+              <div>
+                <h1>Gestão de Cores</h1>
+                <p class="cat-subtitle">Defina as cores disponíveis para os produtos.</p>
+              </div>
+              <button onclick="colorOpenFormModal('add')" class="cat-btn cat-btn-primary">
+                <i class="bi bi-palette-fill"></i> Nova Cor
+              </button>
+            </header>
+
+            <div id="color-loader" class="cat-loader hidden"></div>
+
+            <div id="color-content" class="hidden">
+              <div class="cat-table-wrapper">
+                <table class="cat-table">
+                  <thead>
+                    <tr>
+                      <th>Cor (Preview)</th>
+                      <th>Nome</th>
+                      <th>Hex Code</th>
+                      <th style="text-align: right;">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="color-list-body"></tbody>
+                </table>
+              </div>
+              <div id="color-empty-state" class="hidden">
+                <i class="bi bi-palette" style="font-size: 40px; margin-bottom: 10px;"></i>
+                <p>Nenhuma cor cadastrada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="cupom">
+          <div class="admin-container">
+            <div class="page-header">
+              <h1>Gestão de Cupons</h1>
+              <p class="cat-subtitle">Controle os cupons da loja</p>
+            </div>
+
+            <div id="coupons-list" class="coupons-list">
+              <div class="loading-spinner">Carregando...</div>
+            </div>
+
+            <button onclick="openModal()" id="btn-open-create" class="big-add-btn">
+              Adicionar Cupom <span>+</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="page page-cat" id="categoria-produto">
+          <div class="cat-container">
+            <header class="cat-header-section">
+              <div>
+                <h1>Gestão de Categorias</h1>
+                <p class="cat-subtitle">Controle as categorias da loja (Sincronizado com Produtos)</p>
+              </div>
+              <button onclick="catOpenFormModal('add')" class="cat-btn cat-btn-primary">
+                <i class="bi bi-plus-lg"></i> Nova Categoria
+              </button>
+            </header>
+
+            <div id="cat-stats-container" class="cat-stats-grid">
+            </div>
+
+            <div id="cat-loader" class="cat-loader hidden"></div>
+
+            <div id="cat-content" class="hidden">
+              <div class="cat-table-wrapper">
+                <table class="cat-table">
+                  <thead>
+                    <tr>
+                      <th>Categoria</th>
+                      <th style="text-align: center;">Qtd. Produtos</th>
+                      <th style="text-align: right;">Ações</th>
+                    </tr>
+                  </thead>
+                  <tbody id="cat-list-body">
+                  </tbody>
+                </table>
+              </div>
+
+              <div id="cat-empty-state" class="hidden">
+                <i class="bi bi-inbox" style="font-size: 40px; margin-bottom: 10px;"></i>
+                <p>Nenhuma categoria encontrada.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="page" id="notificacao-geral">
+          <div class="notificacao-geral-wrapper">
+            <h1 class="notificacao-geral-title"> Notificação do sistema</h1>
+            <p class="notificacao-geral-subtitle">Log de Auditoria com Filtros Avançados</p>
+
+            <div class="notificacao-geral-filter-container">
+              <div class="notificacao-geral-filter-row">
+                <div class="notificacao-geral-search-box">
+                  <i class="fa-solid fa-search"></i>
+                  <input type="text" id="notificacao-geral-input-search" class="notificacao-geral-input-control"
+                    placeholder="Pesquisar por nome, ID, valor..." onkeyup="notificacaoGeralFilterLogs()">
+                </div>
+
+                <select id="notificacao-geral-select-table" class="notificacao-geral-select-control"
+                  onchange="notificacaoGeralFilterLogs()">
+                  <option value="all">Todas as Tabelas</option>
+                </select>
+              </div>
+
+              <div class="notificacao-geral-filter-types">
+                <div id="notificacao-geral-type-buttons">
+                  <button class="notificacao-geral-type-btn notificacao-geral-active notificacao-geral-all"
+                    onclick="notificacaoGeralSetEventType('all')">Todos</button>
+                  <button class="notificacao-geral-type-btn notificacao-geral-insert"
+                    onclick="notificacaoGeralSetEventType('INSERT')">Criados (Insert)</button>
+                  <button class="notificacao-geral-type-btn notificacao-geral-update"
+                    onclick="notificacaoGeralSetEventType('UPDATE')">Editados (Update)</button>
+                  <button class="notificacao-geral-type-btn notificacao-geral-delete"
+                    onclick="notificacaoGeralSetEventType('DELETE')">Apagados (Delete)</button>
+                </div>
+                <span class="notificacao-geral-results-count" id="notificacao-geral-results-count">Carregando...</span>
+              </div>
+            </div>
+
+            <div id="notificacao-geral-log-container"></div>
+          </div>
+        </div>
+
+        <div class="page" id="controle-header">
+
+          <section class="header-link-section">
+            <div class="header-link-wrapper">
+              <div class="header-link-header">
+                <h2 class="header-link-main-title">Gerenciar Links do Menu</h2>
+                <p>Clique em qualquer item abaixo para alterar o link de destino.</p>
+              </div>
+
+              <div class="admin-mega-menu-container">
+
+                <div class="admin-menu-column">
+                  <h3>Vestuário</h3>
+                  <ul class="admin-menu-list">
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-ver-todos">Ver Todos</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-camisetas">Camisetas</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-plus-size">Camiseta Plus-Size</a>
+                    </li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-manga-longa">Camiseta Manga
+                        Longa</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-moletons">Moletons</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-jaquetas">Jaquetas E Casacos</a>
+                    </li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-camisas">Camisas</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-calcas">Calças</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-shorts">Shorts E Bermudas</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="vestuario-cropped">Cropped</a></li>
+                  </ul>
+                </div>
+
+                <div class="admin-menu-column">
+                  <h3>Outros</h3>
+                  <ul class="admin-menu-list">
+                    <li><a href="#" class="admin-link-item" data-link-id="outros-ver-todos">Ver Todos</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="outros-juvenil">Juvenil</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="outros-feminino">Feminino</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="outros-packs">Packs</a></li>
+                  </ul>
+                </div>
+
+                <div class="admin-menu-column">
+                  <h3>Acessórios</h3>
+                  <ul class="admin-menu-list">
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-ver-todos">Ver Todos</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-chaveiros">Chaveiros E
+                        Adesivos</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-cuecas">Cuecas</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-gorros">Gorros</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-pochetes">Pochetes</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-mochilas">Mochilas</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-meias">Meias</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-bags">Bags</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-bones">Bonés</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-bucket">Bucket</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="acessorios-carteiras">Carteiras</a></li>
+                  </ul>
+                </div>
+
+                <div class="admin-menu-column">
+                  <h3>Calçados</h3>
+                  <ul class="admin-menu-list">
+                    <li><a href="#" class="admin-link-item" data-link-id="calcados-ver-todos">Ver Todos</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="calcados-chinelos">Chinelos</a></li>
+                    <li><a href="#" class="admin-link-item" data-link-id="calcados-tenis">Tênis</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div class="page" id="status-pedido">
+          <div class="content-wrapper">
+
+            <div class="page-header-internal">
+              <h1 class="page-title">
+                Gerenciamento de Pedidos
+              </h1>
+              <p class="page-subtitle">Acompanhe e atualize o status das vendas recentes.</p>
+            </div>
+
+            <div class="kpi-grid" id="kpi-container">
+            </div>
+
+            <div class="toolbar">
+              <div class="filter-group">
+                <button class="btn-filter active" onclick="filtrarPedidos('TODOS')" id="btn-todos">Todos</button>
+                <button class="btn-filter" onclick="filtrarPedidos('PENDENTE')" id="btn-pendente">Pendentes</button>
+                <button class="btn-filter" onclick="filtrarPedidos('CONFIRMADO')"
+                  id="btn-confirmado">Confirmados</button>
+                <button class="btn-filter" onclick="filtrarPedidos('CANCELADO')" id="btn-cancelado">Cancelados</button>
+              </div>
+
+              <div style="position: relative;">
+                <button class="btn-config" onclick="toggleDropdown()">
+                  <i class="bi bi-layout-three-columns"></i> Colunas
+                </button>
+                <div class="dropdown-menu" id="colunas-menu"></div>
+              </div>
+            </div>
+
+            <div class="table-wrapper-master">
+              <div class="top-scroll-container" id="topScroll">
+                <div class="top-scroll-content" id="topScrollContent"></div>
+              </div>
+
+              <div class="table-container" id="tableContainer">
+                <table class="custom-table" id="tabela-pedidos">
+                  <thead>
+                    <tr id="table-head"></tr>
+                  </thead>
+                  <tbody id="table-body"></tbody>
+                </table>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="page" id="dashboard-tab">
+          <div id="avaliacao-dash-tab" class="avaliacao-dash-container">
+
+            <div class="avaliacao-dash-header">
+              <h2>Gestão de Avaliações</h2>
+              <p>Visualize, filtre e modere todos os comentários da loja.</p>
+            </div>
+
+            <div class="avaliacao-dash-kpi-grid">
+              <div class="avaliacao-dash-kpi-card">
+                <div class="avaliacao-dash-kpi-icon"><i class="bi bi-chat-left-text"></i></div>
+                <div class="avaliacao-dash-kpi-info">
+                  <h3>Total</h3>
+                  <span id="avaliacao-dash-kpi-total">0</span>
+                </div>
+              </div>
+
+              <div class="avaliacao-dash-kpi-card">
+                <div class="avaliacao-dash-kpi-icon"><i class="bi bi-star-fill"></i></div>
+                <div class="avaliacao-dash-kpi-info">
+                  <h3>Média</h3>
+                  <span id="avaliacao-dash-kpi-avg">0.0</span>
+                </div>
+              </div>
+
+              <div class="avaliacao-dash-kpi-card highlight">
+                <div class="avaliacao-dash-kpi-icon"><i class="bi bi-trophy"></i></div>
+                <div class="avaliacao-dash-kpi-info">
+                  <h3>Top Produto</h3>
+                  <span id="avaliacao-dash-kpi-top-product">Carregando...</span>
+                  <small id="avaliacao-dash-kpi-top-count">0 avaliações</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="avaliacao-dash-filters">
+              <div class="avaliacao-dash-search-group">
+                <i class="bi bi-search"></i>
+                <input type="text" id="avaliacao-dash-search" placeholder="Buscar cliente, produto, comentário...">
+              </div>
+
+              <div class="avaliacao-dash-filter-group">
+                <select id="avaliacao-dash-filter-stars">
+                  <option value="">Todas as Estrelas</option>
+                  <option value="5">★★★★★ (5)</option>
+                  <option value="4">★★★★☆ (4)</option>
+                  <option value="3">★★★☆☆ (3)</option>
+                  <option value="2">★★☆☆☆ (2)</option>
+                  <option value="1">★☆☆☆☆ (1)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="avaliacao-dash-table-wrapper">
+              <table class="avaliacao-dash-table" id="avaliacao-dash-table-el">
+                <thead>
+                  <tr>
+                    <th>Info. Cliente</th>
+                    <th>Produto</th>
+                    <th>Nota</th>
+                    <th>Comentário</th>
+                    <th style="text-align:right;">Ações</th>
+                  </tr>
+                </thead>
+                <tbody id="avaliacao-dash-tbody">
+                </tbody>
+              </table>
+
+              <div id="avaliacao-dash-no-msg" class="avaliacao-dash-no-data" style="display:none;">
+                <i class="bi bi-inbox"></i>
+                <p>Nenhuma avaliação encontrada.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div id="modal-user-details" class="custom-modal-overlay hidden">
+    <div class="custom-modal-content details-modal-pro">
+
+      <div class="details-header-pro">
+        <h3>Ficha do Usuário</h3>
+        <button class="close-modal-btn-pro" onclick="closeUserModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="details-body-pro">
+
+        <div class="details-avatar-section">
+          <div class="avatar-large-wrapper" id="detail-avatar-wrapper">
+            <span id="detail-initials">US</span>
+            <img id="detail-img" src="" alt="Avatar" style="display:none;">
+          </div>
+          <h2 id="detail-fullname" class="user-fullname-pro">Carregando...</h2>
+          <p id="detail-username" class="user-username-pro">@usuario</p>
+        </div>
+
+        <div class="details-info-grid">
+          <div class="info-item-pro">
+            <span class="info-label">Email</span>
+            <span id="detail-email" class="info-value">email@exemplo.com</span>
+          </div>
+          <div class="info-item-pro">
+            <span class="info-label">CPF</span>
+            <span id="detail-cpf" class="info-value">---</span>
+          </div>
+          <div class="info-item-pro">
+            <span class="info-label">Data de Cadastro</span>
+            <span id="detail-date" class="info-value">00/00/0000</span>
+          </div>
+          <div class="info-item-pro">
+            <span class="info-label">ID do Sistema</span>
+            <span id="detail-id" class="info-value" style="font-size: 0.8rem; font-family:monospace;">UUID</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="details-footer-pro">
+        <button id="btn-open-ban" class="btn-pro-danger">Banir Usuário</button>
+        <button id="btn-toggle-admin-modal" class="btn-pro-black">Tornar Admin</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-ban-user" class="custom-modal-overlay hidden" style="z-index: 10001;">
+    <div class="custom-modal-content ban-modal-pro">
+      <div class="ban-header-pro">
+        <div class="icon-warning-wrapper">
+          <i class="ri-alarm-warning-fill"></i>
+        </div>
+        <h3>Restringir Acesso</h3>
+        <button class="close-modal-btn-pro" onclick="closeBanModal()"><i class="ri-close-line"></i></button>
+      </div>
+
+      <div class="ban-body-pro">
+        <p class="ban-subtitle">Defina o tempo de suspensão e o motivo para o histórico.</p>
+
+        <div class="form-group-pro">
+          <label>Duração da Suspensão</label>
+          <input type="hidden" id="ban-duration-value">
+          <div class="admin-custom-select" id="ban-duration-wrapper">
+            <div class="select-trigger" tabindex="0">
+              <span id="ban-duration-text">Selecione a duração...</span>
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+            <div class="select-options">
+              <div class="select-option" data-value="permanent">
+                <i class="ri-indeterminate-circle-line"></i> Permanente (Para sempre)
+              </div>
+              <div class="select-option" data-value="temporary">
+                <i class="ri-timer-line"></i> Temporário (Definir data)
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="ban-date-container" class="form-group-pro hidden fade-in">
+          <label>Suspenso até:</label>
+          <div class="input-icon-wrapper-pro">
+            <i class="ri-calendar-event-line"></i>
+            <input type="date" id="ban-date-input" class="input-pro">
+          </div>
+        </div>
+
+        <div class="form-group-pro">
+          <label>Motivo da ação</label>
+          <textarea id="ban-reason" class="textarea-pro" placeholder="Ex: Violação dos termos de uso..."></textarea>
+        </div>
+      </div>
+
+      <div class="ban-footer-pro">
+        <button onclick="closeBanModal()" class="btn-pro-secondary">Cancelar</button>
+        <button onclick="confirmBanUser()" class="btn-pro-danger">Confirmar Banimento</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-coupon" class="modal-overlay-coupon" style="display: none;">
+    <div class="modal-content modal-lg">
+      <h2 id="modal-title">Novo Cupom</h2>
+
+      <div class="coupon-modal-grid">
+        <div class="coupon-form-side">
+          <input type="hidden" id="coupon-id">
+          <div class="form-group">
+            <label>Código de Acesso</label>
+            <div class="input-icon-wrapper">
+              <i class="ri-key-2-line"></i>
+              <input type="text" id="coupon-code" placeholder="Ex: PRIMEIRACOMPRA" maxlength="20"
+                style="text-transform: uppercase;">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Tipo de Cupom</label>
+            <input type="hidden" id="coupon-main-type">
+            <div class="admin-custom-select" id="select-type-wrapper">
+              <div class="select-trigger" tabindex="0">
+                <span id="select-type-text">Selecione o tipo...</span>
+                <i class="ri-arrow-down-s-line"></i>
+              </div>
+              <div class="select-options">
+                <div class="select-option" data-value="discount"><i class="ri-price-tag-3-line"></i> Desconto no Produto
+                </div>
+                <div class="select-option" data-value="shipping"><i class="ri-truck-line"></i> Frete / Entrega</div>
+              </div>
+            </div>
+          </div>
+          <div id="discount-options" class="dynamic-options hidden fade-in">
+            <label>Porcentagem de Desconto</label>
+            <div class="percent-grid">
+              <button type="button" class="percent-btn" data-value="5">5%</button>
+              <button type="button" class="percent-btn" data-value="10">10%</button>
+              <button type="button" class="percent-btn" data-value="15">15%</button>
+              <button type="button" class="percent-btn" data-value="20">20%</button>
+              <button type="button" class="percent-btn" data-value="25">25%</button>
+              <button type="button" class="percent-btn" data-value="30">30%</button>
+              <button type="button" class="percent-btn" data-value="50">50%</button>
+            </div>
+          </div>
+          <div id="shipping-options" class="dynamic-options hidden fade-in">
+            <label style="margin-bottom: 10px; display:block;">Tipo de Benefício no Frete</label>
+            <div class="shipping-cards-row">
+              <div class="shipping-card-option selected" data-value="free">
+                <input type="radio" name="shipping_type" value="free" checked style="display:none;">
+                <div class="card-icon"><i class="ri-gift-line"></i></div>
+                <div class="card-info"><span class="card-title">Frete Grátis</span><span class="card-desc">Cliente não
+                    paga nada</span></div>
+                <div class="check-icon"><i class="ri-check-line"></i></div>
+              </div>
+              <div class="shipping-card-option" data-value="percent">
+                <input type="radio" name="shipping_type" value="percent" style="display:none;">
+                <div class="card-icon"><i class="ri-percent-line"></i></div>
+                <div class="card-info"><span class="card-title">Desconto no Frete</span><span class="card-desc">Redução
+                    parcial</span></div>
+                <div class="check-icon"><i class="ri-check-line"></i></div>
+              </div>
+            </div>
+            <div id="shipping-percent-wrapper" class="hidden" style="margin-top: 15px;">
+              <label>Porcentagem OFF</label>
+              <div class="percent-grid" id="shipping-percent-grid">
+                <button type="button" class="percent-btn" data-value="10">10%</button>
+                <button type="button" class="percent-btn" data-value="20">20%</button>
+                <button type="button" class="percent-btn" data-value="50">50%</button>
+                <button type="button" class="percent-btn" data-value="75">75%</button>
+              </div>
+              <input type="hidden" id="shipping-percent-value">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Descrição (Interna)</label>
+            <textarea id="coupon-desc" placeholder="Ex: Válido para compras acima de R$100"></textarea>
+          </div>
+          <div class="form-group">
+            <label>Expira em (Opcional)</label>
+            <input type="date" id="coupon-expires">
+          </div>
+        </div>
+
+        <div class="coupon-preview-side">
+          <h3>Visualização</h3>
+          <div class="preview-container">
+            <div id="preview-ticket" class="coupon-ticket"><span id="preview-text">CUPOM</span></div>
+          </div>
+          <div class="style-controls">
+            <div class="style-group">
+              <label>Cor Principal</label>
+              <div class="color-picker-row" id="primary-colors">
+                <div class="color-dot active" style="background:#000;" data-color="#000000"></div>
+                <div class="color-dot" style="background:#191D28;" data-color="#191D28"></div>
+                <div class="color-dot" style="background:#003366;" data-color="#003366"></div>
+                <div class="color-dot" style="background:#00bfa5;" data-color="#00bfa5"></div>
+                <div class="color-dot custom-wrapper"><i class="ri-add-line"></i><input type="color"
+                    id="custom-primary"></div>
+              </div>
+            </div>
+            <div class="style-group">
+              <label>Cor de Fundo</label>
+              <div class="color-picker-row" id="secondary-colors">
+                <div class="color-dot" style="background:#ffffff;" data-color="#ffffff"></div>
+                <div class="color-dot active" style="background:#f0f0f0;" data-color="#f0f0f0"></div>
+                <div class="color-dot" style="background:#e0f7fa;" data-color="#e0f7fa"></div>
+                <div class="color-dot" style="background:#fff0f5;" data-color="#fff0f5"></div>
+                <div class="color-dot custom-wrapper"><i class="ri-add-line"></i><input type="color"
+                    id="custom-secondary"></div>
+              </div>
+            </div>
+            <div class="style-group">
+              <label>Estilo da Borda</label>
+              <input type="hidden" id="border-style-value">
+              <div class="admin-custom-select" id="select-border-wrapper">
+                <div class="select-trigger" tabindex="0"><span id="select-border-text">Tracejada</span><i
+                    class="ri-arrow-down-s-line"></i></div>
+                <div class="select-options">
+                  <div class="select-option" data-value="dashed">Tracejada</div>
+                  <div class="select-option" data-value="solid">Sólida</div>
+                  <div class="select-option" data-value="dotted">Pontilhada</div>
+                  <div class="select-option" data-value="double">Dupla</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-actions">
+        <button id="btn-cancel-modal" class="btn-cancelar">Cancelar</button>
+        <button id="btn-save-coupon" class="btn-principal">Salvar Cupom</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-product-details-view" class="custom-modal-overlay hidden">
+    <div class="custom-modal-content details-modal-pro">
+
+      <div class="details-header-pro">
+        <h3>Detalhes do Produto</h3>
+        <button class="close-modal-btn-pro" onclick="closeProductDetailsModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="details-body-pro">
+        <div class="details-avatar-section">
+          <div class="avatar-large-wrapper avatar-large-wrapper-best" id="prod-detail-img-wrapper"
+            style="border-radius: 12px; background: #f3f4f6;">
+            <img id="prod-detail-img" src="" alt="Produto" style="display:none; object-fit: contain;">
+            <i id="prod-detail-icon" class="bi bi-box-seam" style="display:none; color: #9ca3af;"></i>
+          </div>
+          <h2 id="prod-detail-name" class="user-fullname-pro" style="margin-top: 10px;">Nome do Produto</h2>
+          <p id="prod-detail-id" class="user-username-pro">ID: ---</p>
+        </div>
+
+        <div class="details-info-grid">
+          <div class="info-item-pro">
+            <span class="info-label">Total Vendido</span>
+            <span id="prod-detail-total" class="info-value" style="font-size: 1.2rem; font-weight: 700;">0</span>
+          </div>
+          <div class="info-item-pro">
+            <span class="info-label">Status</span>
+            <span class="info-value" style="color: #10b981; font-weight: 600;">Ativo</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="details-footer-pro">
+        <button class="btn-pro-secondary" onclick="closeProductDetailsModal()">Fechar</button>
+        <button id="btn-view-sales-history" class="btn-pro-black">
+          <i class="bi bi-receipt" style="margin-right: 8px;"></i> Ver Histórico de Vendas
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-product-sales-history" class="custom-modal-overlay hidden" style="z-index: 10002;">
+    <div class="custom-modal-content details-modal-pro details-modal-pro-best"
+      style="max-height: 85vh; display:flex; flex-direction:column;">
+
+      <div class="details-header-pro">
+        <h3>Histórico de Vendas</h3>
+        <button class="close-modal-btn-pro" onclick="closeProductSalesModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div style="padding: 15px 24px; border-bottom: 1px solid #f3f4f6; background: #fff;">
+        <div class="filter-group-time" style="justify-content: center; width: 100%; display: flex;">
+          <button class="filter-btn active" onclick="loadProductSales('all', this)">Tudo</button>
+          <button class="filter-btn" onclick="loadProductSales('month', this)">Mês</button>
+          <button class="filter-btn" onclick="loadProductSales('week', this)">Semana</button>
+          <button class="filter-btn" onclick="loadProductSales('today', this)">Hoje</button>
+        </div>
+      </div>
+
+      <div class="details-body-pro" style="padding: 0; overflow-y: auto; flex: 1; background: #f9fafb;">
+
+        <div id="sales-history-list" class="user-cards-list user-cards-list-best" style="padding: 20px; gap: 10px;">
+          <div style="text-align:center; padding: 20px; color:#9ca3af;">Carregando...</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-export-reports" class="custom-modal-overlay hidden" style="z-index: 10005;">
+    <div class="custom-modal-content" style="max-width: 60vw;">
+      <div class="details-header-pro">
+        <h3>Exportar Relatório de Vendas</h3>
+        <button class="close-modal-btn-pro" onclick="closeExportModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="details-body-pro" style="padding: 20px;">
+        <p style="text-align:center; color:#64748b; margin-bottom:20px;">Selecione o tipo de período:</p>
+
+        <div style="display:flex; justify-content:center; gap:10px; margin-bottom:20px; width:100%;">
+          <button onclick="renderExportOptions('day')" class="filter-btn active" id="btn-exp-day">Diário</button>
+          <button onclick="renderExportOptions('week')" class="filter-btn" id="btn-exp-week">Semanal</button>
+          <button onclick="renderExportOptions('month')" class="filter-btn" id="btn-exp-month">Mensal</button>
+        </div>
+
+        <div id="export-options-list"
+          style="max-height: 300px; overflow-y: auto; display:flex; flex-direction:column; gap:10px; width:100%; padding:1rem;">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-report-type" class="custom-modal-overlay hidden" style="z-index: 10010;">
+    <div class="custom-modal-content details-modal-pro" style="max-width: 40vw;">
+
+      <div class="details-header-pro">
+        <h3>Tipo de Relatório</h3>
+        <button class="close-modal-btn-pro" onclick="closeReportTypeModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="details-body-pro" style="text-align: center; padding: 30px;">
+        <div
+          style="background: #f0f9ff; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 20px auto; color: #0284c7; font-size: 1.8rem;">
+          <i class="bi bi-file-earmark-bar-graph"></i>
+        </div>
+
+        <h4 style="margin-bottom: 10px; color: #1e293b;">Visualização dos Dados</h4>
+        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 25px;">
+          O sumário por categorias será incluído no topo de ambas as opções.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <button onclick="confirmExportGeneration('full')" class="btn-pro-black"
+            style="justify-content: space-between; width: 30vw;">
+            <span>Relatório Completo</span>
+            <span style="font-size: 0.8rem; font-weight: 400; opacity: 0.8; gap: 1rem;">(Categorias + Produtos)</span>
+          </button>
+
+          <button onclick="confirmExportGeneration('summary')" class="btn-pro-secondary"
+            style="justify-content: space-between;">
+            <span>Apenas Resumo</span>
+            <span style="font-size: 0.8rem; font-weight: 400; opacity: 0.8;">(Somente Categorias)</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cat-modal-form" class="cat-modal-overlay">
+    <div class="cat-modal-content">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <h2 id="cat-form-title" style="margin: 0; font-size: 1.25rem;">Categoria</h2>
+        <button onclick="catCloseModals()" class="cat-close-btn"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <label style="font-size: 0.9rem; font-weight: 500;">Nome da Categoria</label>
+      <input type="text" id="cat-input-name" class="cat-form-input" placeholder="Ex: Eletrônicos">
+
+      <input type="hidden" id="cat-input-old-name">
+      <input type="hidden" id="cat-input-mode">
+      <input type="hidden" id="cat-input-id">
+
+      <div class="cat-modal-footer">
+        <button onclick="catCloseModals()" class="cat-btn cat-btn-secondary">Cancelar</button>
+        <button onclick="catHandleSave()" id="cat-btn-save" class="cat-btn cat-btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="cat-modal-delete" class="cat-modal-overlay">
+    <div class="cat-modal-content">
+      <div class="cat-delete-icon-wrapper">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+      </div>
+
+      <h2 class="cat-modal-title">Excluir Categoria?</h2>
+
+      <p class="cat-modal-desc">
+        Você está prestes a excluir a categoria <strong id="cat-delete-target-name" style="color: #1e293b;"></strong>.
+        <br><br>
+        <span id="cat-delete-count-warning"></span> produtos deixarão de ter essa categoria.
+      </p>
+
+      <div class="cat-modal-footer">
+        <button onclick="catCloseModals()" class="cat-btn cat-btn-secondary">Cancelar</button>
+        <button onclick="catConfirmDelete()" id="cat-btn-confirm-delete" class="cat-btn cat-btn-danger">Sim,
+          excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="deleteModal">
+    <div class="delete-card">
+      <div class="delete-icon">
+        <i class="bi bi-trash-fill"></i>
+      </div>
+      <h2 class="delete-title">Excluir Pedido</h2>
+      <p class="delete-text">
+        Tem certeza de que deseja excluir o pedido
+        <span id="deleteOrderId" style="font-weight: bold; color: #dc2626;"></span>?
+      </p>
+      <p class="delete-warning">Esta ação é irreversível.</p>
+      <div class="delete-buttons">
+        <button class="btn-modal btn-cancel-modal" onclick="fecharDeleteModal()">Cancelar</button>
+        <button class="btn-confirm-delete" onclick="confirmarExclusao()">Sim, Excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="statusModal">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3 class="modal-title">Gerenciar Pedido</h3>
+        <p class="modal-subtitle">Editando Pedido <span id="modalOrderId" style="font-weight: bold;">#...</span>
+        </p>
+      </div>
+
+      <p style="font-weight: 600; margin-bottom: 12px; font-size: 0.9rem; color:#64748b;">Alterar Status:</p>
+      <div class="status-options-grid">
+        <button class="status-option-btn" onclick="selecionarOpcaoModal('PENDENTE')" id="opt-pendente">
+          <span><i class="bi bi-hourglass-split"></i> Pendente</span>
+          <i class="bi bi-check-circle-fill check-icon" style="display:none"></i>
+        </button>
+        <button class="status-option-btn" onclick="selecionarOpcaoModal('CONFIRMADO')" id="opt-confirmado">
+          <span><i class="bi bi-check-lg"></i> Confirmado</span>
+          <i class="bi bi-check-circle-fill check-icon" style="display:none"></i>
+        </button>
+        <button class="status-option-btn" onclick="selecionarOpcaoModal('CANCELADO')" id="opt-cancelado">
+          <span><i class="bi bi-x-circle"></i> Cancelado</span>
+          <i class="bi bi-check-circle-fill check-icon" style="display:none"></i>
+        </button>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn-delete-modal" onclick="excluirPedido()"><i class="bi bi-trash"></i> Excluir</button>
+        <div class="action-group">
+          <button class="btn-modal btn-cancel-modal" onclick="fecharModal()">Cancelar</button>
+          <button class="btn-modal btn-save" onclick="salvarAlteracaoModal()">Salvar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="notificacao-geral-detail-modal" class="notificacao-geral-modal-overlay">
+    <div class="notificacao-geral-modal-content">
+      <div class="notificacao-geral-modal-header">
+        <span class="notificacao-geral-modal-title" id="notificacao-geral-modal-title-text"></span>
+        <button class="notificacao-geral-close-btn" onclick="notificacaoGeralCloseModal()">&times;</button>
+      </div>
+
+      <div class="notificacao-geral-view-controls">
+        <button class="notificacao-geral-view-btn notificacao-geral-active"
+          onclick="notificacaoGeralSwitchView('visual')" id="notificacao-geral-btn-visual"><i
+            class="fa-regular fa-eye"></i> Visual Cliente</button>
+        <button class="notificacao-geral-view-btn" onclick="notificacaoGeralSwitchView('code')"
+          id="notificacao-geral-btn-code"><i class="fa-solid fa-code"></i>
+          Dados Técnicos</button>
+      </div>
+      <div class="notificacao-geral-modal-body" id="notificacao-geral-modal-body-content"></div>
+    </div>
+  </div>
+
+  <div id="color-modal-form" class="cat-modal-overlay" style="z-index: 10005;">
+    <div class="cat-modal-content">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <h2 id="color-form-title" style="margin: 0; font-size: 1.25rem;">Nova Cor</h2>
+        <button onclick="colorCloseModals()" class="cat-close-btn"><i class="bi bi-x-lg"></i></button>
+      </div>
+
+      <input type="hidden" id="color-input-id">
+      <input type="hidden" id="color-input-mode">
+
+      <label style="font-size: 0.9rem; font-weight: 500;">Nome da Cor</label>
+      <input type="text" id="color-input-name" class="cat-form-input" placeholder="Ex: Azul Marinho">
+
+      <label style="font-size: 0.9rem; font-weight: 500; margin-top:15px; display:block;">Seletor</label>
+      <div style="display: flex; gap: 10px; align-items: center;">
+        <input type="color" id="color-input-picker"
+          style="width: 50px; height: 40px; cursor: pointer; border:none; padding:0;"
+          onchange="document.getElementById('color-input-hex').value = this.value">
+
+        <input type="text" id="color-input-hex" class="cat-form-input" placeholder="#000000"
+          style="margin-top:0; flex:1;" onchange="document.getElementById('color-input-picker').value = this.value">
+      </div>
+
+      <div class="cat-modal-footer">
+        <button onclick="colorCloseModals()" class="cat-btn cat-btn-secondary">Cancelar</button>
+        <button onclick="colorHandleSave()" class="cat-btn cat-btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-finance-details" class="custom-modal-overlay hidden" style="z-index: 10020;">
+    <div class="custom-modal-content details-modal-pro" style="max-width: 500px;">
+
+      <div class="details-header-pro">
+        <h3>Detalhamento Financeiro</h3>
+        <button class="close-modal-btn-pro" onclick="closeFinanceModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="details-body-pro" style="padding: 20px;">
+        <p style="text-align: center; color: #64748b; margin-bottom: 20px;">
+          Valores exatos sem arredondamento.
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 15px; width: 100%;">
+
+          <div style="width: 100%; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <small style="color: #64748b; font-weight: 600; text-transform: uppercase;">Vendas Totais (Qtd)</small>
+            <div id="modal-fin-vendas" style="font-size: 1.2rem; font-weight: 700; color: #1e293b;">0</div>
+          </div>
+
+          <div style="width: 100%; background: #f8fafc; padding: 15px; border-radius: 8px; border: 1px solid #e2e8f0;">
+            <small style="color: #64748b; font-weight: 600; text-transform: uppercase;">Lucro Bruto</small>
+            <div id="modal-fin-bruto" style="font-size: 1.2rem; font-weight: 700; color: #1e293b;">R$ 0,00</div>
+          </div>
+
+          <div style="width: 100%; background: #fff1f2; padding: 15px; border-radius: 8px; border: 1px solid #fecdd3;">
+            <small style="color: #be123c; font-weight: 600; text-transform: uppercase;">Custo Total</small>
+            <div id="modal-fin-custo" style="font-size: 1.2rem; font-weight: 700; color: #be123c;">R$ 0,00</div>
+          </div>
+
+          <div style="width: 100%; background: #f0fdf4; padding: 15px; border-radius: 8px; border: 1px solid #bbf7d0;">
+            <small style="color: #15803d; font-weight: 600; text-transform: uppercase;">Lucro Líquido</small>
+            <div id="modal-fin-liquido" style="font-size: 1.2rem; font-weight: 700; color: #15803d;">R$ 0,00</div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="details-footer-pro">
+        <button class="btn-pro-secondary" onclick="closeFinanceModal()" style="width: 100%;">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="drop-modal-form" class="drop-modal-overlay">
+    <div class="drop-modal-content">
+      <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+        <h2 id="drop-form-title" style="margin: 0; font-size: 1.25rem;">Drop</h2>
+        <button onclick="dropCloseModals()" class="drop-close-btn"><i class="bi bi-x-lg"></i></button>
+      </div>
+      <label style="font-size: 0.9rem; font-weight: 500;">Nome da Drop</label>
+      <input type="text" id="drop-input-name" class="drop-form-input" placeholder="Ex: Calor de Verão">
+
+      <input type="hidden" id="drop-input-old-name">
+      <input type="hidden" id="drop-input-mode">
+      <input type="hidden" id="drop-input-id">
+
+      <div class="drop-modal-footer">
+        <button onclick="dropCloseModals()" class="drop-btn drop-btn-secondary">Cancelar</button>
+        <button onclick="dropHandleSave()" id="drop-btn-save" class="drop-btn drop-btn-primary">Salvar</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="drop-modal-delete" class="drop-modal-overlay">
+    <div class="drop-modal-content">
+      <div class="drop-delete-icon-wrapper">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+      </div>
+
+      <h2 class="drop-modal-title">Excluir Drop?</h2>
+
+      <p class="drop-modal-desc">
+        Você está prestes a excluir a Drop <strong id="drop-delete-target-name" style="color: #1e293b;"></strong>.
+        <br><br>
+        <span id="drop-delete-count-warning"></span> produtos deixarão de ter essa Drop.
+      </p>
+
+      <div class="drop-modal-footer">
+        <button onclick="dropCloseModals()" class="drop-btn drop-btn-secondary">Cancelar</button>
+        <button onclick="dropConfirmDelete()" id="drop-btn-confirm-delete" class="drop-btn drop-btn-danger">Sim,
+          excluir</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="modal-review-details" class="custom-modal-overlay hidden" style="z-index: 10005;">
+    <div class="custom-modal-content details-modal-pro details-modal-pro-ava" style="max-width: 600px;">
+
+      <div class="details-header-pro">
+        <h3>Detalhes da Avaliação</h3>
+        <button class="close-modal-btn-pro" onclick="closeReviewDetailsModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+
+      <div class="details-body-pro" style="padding: 0;">
+
+        <div id="review-user-section" class="review-user-card-modal" title="Ver Perfil do Cliente">
+          <div class="review-avatar-wrapper">
+            <img id="review-modal-avatar" src="" alt="Avatar" style="display:none;">
+            <span id="review-modal-initials">US</span>
+          </div>
+          <div class="review-user-info">
+            <h4 id="review-modal-name">Nome do Cliente</h4>
+            <span id="review-modal-username">@usuario</span>
+          </div>
+          <div class="review-user-arrow">
+            <i class="bi bi-chevron-right"></i>
+          </div>
+        </div>
+
+        <div style="padding: 25px; width: 100%;">
+
+          <div class="review-meta-row">
+            <div class="review-product-badge">
+              <i class="bi bi-bag-fill"></i> <span id="review-modal-product">Produto...</span>
+            </div>
+            <div class="review-stars-display" id="review-modal-stars">
+              ★★★★★
+            </div>
+          </div>
+
+          <div class="review-text-box">
+            <i class="bi bi-quote quote-icon"></i>
+            <p id="review-modal-comment">Comentário do usuário...</p>
+          </div>
+
+          <div id="review-photo-container" class="review-photo-wrapper hidden">
+            <p class="photo-label">Foto anexada:</p>
+            <img id="review-modal-photo" src="" alt="Foto da avaliação" onclick="window.open(this.src, '_blank')">
+          </div>
+
+          <div class="review-date-badge" id="review-modal-date">
+            Enviado em 00/00/0000
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="details-footer-pro">
+        <button class="btn-pro-secondary" onclick="closeReviewDetailsModal()">Fechar</button>
+        <button id="btn-delete-review-modal" class="btn-pro-danger">
+          <i class="bi bi-trash3-fill"></i> Excluir Avaliação
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="modal-log-details" class="custom-modal-overlay hidden" style="z-index: 10050;">
+    <div class="custom-modal-content details-modal-pro" style="max-width: 700px;">
+      <div class="details-header-pro">
+        <h3>Detalhes do Erro</h3>
+        <button class="close-modal-btn-pro" onclick="closeLogModal()">
+          <i class="ri-close-line"></i>
+        </button>
+      </div>
+      <div class="details-body-pro" style="padding: 20px;">
+        <div class="log-detail-group">
+          <label>Mensagem:</label>
+          <div id="modal-log-message"
+            style="color: #dc2626; font-weight: 700; background: #fef2f2; padding: 10px; border-radius: 6px; border: 1px solid #fecaca;">
+          </div>
+        </div>
+
+        <div class="log-detail-grid"
+          style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+          <div>
+            <label style="font-size: 0.85rem; color: #64748b; font-weight: bold;">Navegador:</label>
+            <div id="modal-log-agent" style="font-size: 0.9rem; word-break: break-all;"></div>
+          </div>
+          <div>
+            <label style="font-size: 0.85rem; color: #64748b; font-weight: bold;">Local:</label>
+            <div id="modal-log-source" style="font-size: 0.9rem; word-break: break-all;"></div>
+          </div>
+        </div>
+
+        <div class="log-detail-group" style="margin-top: 20px;">
+          <label style="font-size: 0.85rem; color: #64748b; font-weight: bold;">Stack Trace (Técnico):</label>
+          <pre id="modal-log-stack"
+            style="background: #1e293b; color: #a5f3fc; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 0.8rem; margin-top: 5px; max-height: 200px;"></pre>
+        </div>
+      </div>
+      <div class="details-footer-pro">
+        <button class="btn-pro-secondary" onclick="closeLogModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="assets/js/menu-hamburger.js"></script>
+  <script src="assets/js/loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js/dist/umd/supabase.min.js"></script>
+  <script type="module" src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/cupons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  <script src="assets/js/dashboard.js"></script>
+  <script src="assets/js/support-chat.js"></script>
+  <script src="assets/js/header-cell.js"></script>
+  <script src="assets/js/header-control.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+  <script src="assets/js/status-pedido-dash.js"></script>
+  <script src="assets/js/notificacao-geral.js"></script>
+  <script src="assets/js/collection-linker.js"></script>
+  <script src="assets/js/drops.js"></script>
+  <script src="assets/js/dash-avaliacao.js"></script>
+  <script src="assets/js/search-modal.js" type="module"></script>
+</body>
+
+
+</html>

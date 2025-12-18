@@ -1,0 +1,153 @@
+@charset "UTF-8";
+
+/* Telas
+------------------------
+Pequenas telas: até 600px
+Celular: 600px - 769px
+Tablet: 769px- 992px
+Desktop: 992px - 1200px
+Grandes telas - acim 1200px
+*/
+
+:root {
+  --first-color: #010326;
+  --fifth-color: #0D0D0D;
+  --icon-size-perfil: 1.45rem;
+  --regular-font: 16px;
+  --big-font: 23px;
+}
+
+/*--------------------- PERFIL (TABLET E MOBILE GERAL) ---------------------*/
+
+@media screen and (max-width: 769px) {
+  .words {
+    display: none;
+  }
+
+  .perfil-main {
+    display: flex;
+    justify-content: center;
+    padding: 7px;
+  }
+
+  .perfil-cliente {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 7px;
+  }
+
+  .painel-cliente-nav {
+    height: auto;
+    padding: 0%;
+    padding-bottom: 22px;
+  }
+
+  .perfil-cliente>div {
+    width: 100%;
+  }
+
+  .list-page-perfil {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .list-page-perfil a {
+    height: auto;
+    font-size: var(--icon-size);
+    border-left: none;
+    border-bottom: 4px solid transparent;
+  }
+
+  .list-page-perfil a.active {
+    height: auto;
+    border-bottom-color: var(--first-color);
+  }
+
+  #email {
+    overflow: hidden;
+  }
+
+  .responsive {
+    display: block;
+    margin-left: 15px;
+  }
+
+  /* --- MODAIS (RESPONSIVIDADE GERAL) --- */
+  .modal-content {
+    width: 95%;
+    padding: 1.5rem;
+    padding-top: 3.5rem;
+  }
+
+  /* Grid do formulário (Endereço, Cartão) vira 1 coluna */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Ajustes Inputs de Telefone */
+  .phone-input-group {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .country-select-wrapper {
+    width: 100%;
+  }
+
+  #telefone-input {
+    width: 100%;
+  }
+}
+
+/*--------------------- PERFIL (CELULARES PEQUENOS) ---------------------*/
+@media (max-width: 400px) {
+
+  /* Tipografia do Modal */
+  .modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Botões do Modal (Salvar/Cancelar) */
+  .modal-actions {
+    flex-direction: column-reverse;
+    /* Botões um em cima do outro */
+    gap: 0.75rem;
+  }
+
+  .modal-actions button {
+    width: 100%;
+    padding: 14px;
+    font-size: 1rem;
+  }
+
+  /* --- CORREÇÕES ESPECÍFICAS DE FORMULÁRIO (CARTÃO) --- */
+
+  .form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  /* Garante que CVV e Validade fiquem lado a lado corretamente */
+  .form-grid>div[style*="gap: 1rem"] {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px !important;
+  }
+
+  .list-page-perfil a {
+    width: 40px;
+    font-size: var(--icon-size-perfil);
+    border-left: none;
+    border-bottom: 4px solid transparent;
+    display: flex;
+    justify-content: center;
+  }
+
+    .custom-select-trigger{
+    max-width: 140px;
+    overflow: hidden;
+  }
+}
+
